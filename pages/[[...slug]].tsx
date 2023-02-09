@@ -1,8 +1,9 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
 
-import { getPageBySlug, getPages, resolveFields } from '@utils/contentful-utils';
+import { getPageBySlug, getPages, MetaFields, ResolvedPage, resolveFields } from '@utils/contentful-utils';
 import { TypePage } from '@/types';
+import { getComponent } from '@/utils/component-utils';
 
 export const getStaticPaths: GetStaticPaths = async () => {
     const pages = await getPages();
@@ -13,10 +14,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
     const urlPath = ([params?.slug] || ['/']).flat().join('/') || '/';
     const pageEntry = await getPageBySlug(urlPath);
-    return { props: { page: resolveFields(pageEntry) } };
+    return { props: { page: resolveFields<TypePage>(pageEntry) } };
 };
 
-const ComposablePage = ({ page }: { page: TypePage }) => {
+const ComposablePage = ({ page }: { page: ResolvedPage }) => {
     if (!page) return null;
 
     return (
@@ -28,13 +29,13 @@ const ComposablePage = ({ page }: { page: TypePage }) => {
             <main>
                 <h1>{page.fields.title}</h1>
             </main>
-            {/* <main data-sb-object-id={_id}>
-                {fields.sections?.map((section, index) => {
-                    const Component = getComponent(section._type);
-
-                    return <Component path={`sections.${index}`} key={`${section.type}-${index}`} {...section} />;
+            <main>
+                {page.fields.sections?.map((section, index) => {
+                    const type = (section as any)._type as MetaFields['_type'];
+                    const Component = getComponent(type);
+                    return <Component key={index} {...section.fields} />;
                 })}
-            </main> */}
+            </main>
         </>
     );
 };

@@ -1,6 +1,7 @@
 import { createClient, Entry } from 'contentful';
 import { TypePage, TypePageFields } from '@/types';
 import { IS_DEV, PAGE_CONTENT_TYPE } from '@utils/constants';
+import { SectionType } from './component-utils';
 
 const client = createClient({
     accessToken: IS_DEV ? process.env.CONTENTFUL_PREVIEW_TOKEN! : process.env.CONTENTFUL_DELIVERY_TOKEN!,
@@ -27,13 +28,26 @@ export async function getPageBySlug(slug: string): Promise<TypePage | undefined>
     return pages.find((page) => page.fields.slug === slug);
 }
 
+// ---------------------------------------- | Field Resolvers
+
+export type MetaFields = {
+    _id: string;
+    _type: SectionType;
+};
+
+export type ResolvedPage = MetaFields & {
+    fields: TypePageFields & { sections?: Array<TypePageFields['sections'] & { _id: string; _type: SectionType }> };
+};
+
+export interface ResolvedSection {}
+
 /**
  * Resolves field values for a Contentful object, including nested references.
  *
  * @param entry Entry object from Contentful
  * @returns An object of resolved values for the entry
  */
-export function resolveFields(entry: any): { _id: string; _type: string; fields: { [key: string]: any } } | null {
+export function resolveFields<FieldType>(entry: any): { _id: string; _type: string; fields: FieldType } | null {
     return {
         _id: entry.sys?.id,
         _type: entry.sys?.contentType?.sys.id || entry.sys?.type,
@@ -52,7 +66,7 @@ export function resolveFields(entry: any): { _id: string; _type: string; fields:
  */
 function parseField(value: any) {
     // Individual reference value
-    if (typeof value === 'object' && value.sys) return resolveFields(value);
+    if (typeof value === 'object' && value.sys) return resolveFields<unknown>(value);
     // Array of references
     if (Array.isArray(value)) return value.map(resolveFields);
     // Everything else passes through.

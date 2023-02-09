@@ -12,7 +12,7 @@
         "id": "page",
         "type": "ContentType",
         "createdAt": "2023-02-09T19:22:50.397Z",
-        "updatedAt": "2023-02-09T19:25:37.444Z",
+        "updatedAt": "2023-02-09T21:23:23.113Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -20,8 +20,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 3,
-        "publishedAt": "2023-02-09T19:25:37.444Z",
+        "publishedVersion": 5,
+        "publishedAt": "2023-02-09T21:23:23.113Z",
         "firstPublishedAt": "2023-02-09T19:22:50.704Z",
         "createdBy": {
           "sys": {
@@ -37,8 +37,8 @@
             "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
-        "publishedCounter": 2,
-        "version": 4,
+        "publishedCounter": 3,
+        "version": 6,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -72,6 +72,181 @@
           ],
           "disabled": false,
           "omitted": false
+        },
+        {
+          "id": "sections",
+          "name": "Sections",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "heading",
+                  "paragraph"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "abm9he3ijxmu"
+          }
+        },
+        "id": "paragraph",
+        "type": "ContentType",
+        "createdAt": "2023-02-09T21:21:20.392Z",
+        "updatedAt": "2023-02-09T21:21:20.621Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-02-09T21:21:20.621Z",
+        "firstPublishedAt": "2023-02-09T21:21:20.621Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        }
+      },
+      "displayField": "body",
+      "name": "Paragraph",
+      "description": "A simple block of text",
+      "fields": [
+        {
+          "id": "body",
+          "name": "Body",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "abm9he3ijxmu"
+          }
+        },
+        "id": "heading",
+        "type": "ContentType",
+        "createdAt": "2023-02-09T21:22:49.362Z",
+        "updatedAt": "2023-02-09T21:22:49.612Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-02-09T21:22:49.612Z",
+        "firstPublishedAt": "2023-02-09T21:22:49.612Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        }
+      },
+      "displayField": "body",
+      "name": "Heading",
+      "description": "<h1> to <h6>",
+      "fields": [
+        {
+          "id": "body",
+          "name": "Body",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "level",
+          "name": "Level",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "in": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6"
+              ]
+            }
+          ],
+          "defaultValue": {
+            "en-US": "2"
+          },
+          "disabled": false,
+          "omitted": false
         }
       ]
     }
@@ -90,7 +265,7 @@
             "linkType": "Space"
           }
         },
-        "version": 4,
+        "version": 6,
         "createdAt": "2023-02-09T19:22:50.813Z",
         "createdBy": {
           "sys": {
@@ -99,7 +274,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2023-02-09T19:25:37.974Z",
+        "updatedAt": "2023-02-09T21:23:23.538Z",
         "updatedBy": {
           "sys": {
             "id": "7zhoOzOJYq0RqY5mshy4HK",
@@ -134,6 +309,118 @@
             "helpText": "Full URL path to the page"
           },
           "widgetId": "slugEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "sections",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "abm9he3ijxmu",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2023-02-09T21:21:20.691Z",
+        "createdBy": {
+          "sys": {
+            "id": "7zhoOzOJYq0RqY5mshy4HK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-02-09T21:21:21.176Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7zhoOzOJYq0RqY5mshy4HK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "paragraph",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "body",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "abm9he3ijxmu",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2023-02-09T21:22:49.676Z",
+        "createdBy": {
+          "sys": {
+            "id": "7zhoOzOJYq0RqY5mshy4HK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-02-09T21:22:49.993Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7zhoOzOJYq0RqY5mshy4HK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "heading",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "body",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "level",
+          "widgetId": "dropdown",
           "widgetNamespace": "builtin"
         }
       ]
@@ -206,6 +493,301 @@
         },
         "slug": {
           "en-US": "my-test-page"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "abm9he3ijxmu"
+          }
+        },
+        "id": "2IzbxPzQvQFel1tquYZbdx",
+        "type": "Entry",
+        "createdAt": "2023-02-09T21:05:44.126Z",
+        "updatedAt": "2023-02-09T21:24:37.347Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2023-02-09T21:24:37.347Z",
+        "firstPublishedAt": "2023-02-09T21:24:37.347Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "page"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Home Page"
+        },
+        "slug": {
+          "en-US": "/"
+        },
+        "sections": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6JbTKvlZCWnzC9rgqbn5xw"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2cZyp9ByCotfm5FYBQvnFx"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3eHEdGZtwhjdmcrqmg9qox"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "abm9he3ijxmu"
+          }
+        },
+        "id": "6JbTKvlZCWnzC9rgqbn5xw",
+        "type": "Entry",
+        "createdAt": "2023-02-09T21:23:32.422Z",
+        "updatedAt": "2023-02-09T21:24:02.156Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2023-02-09T21:24:02.156Z",
+        "firstPublishedAt": "2023-02-09T21:24:02.156Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "heading"
+          }
+        }
+      },
+      "fields": {
+        "body": {
+          "en-US": "Aliqua nostrud Lorem laborum labore"
+        },
+        "level": {
+          "en-US": "2"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "abm9he3ijxmu"
+          }
+        },
+        "id": "2cZyp9ByCotfm5FYBQvnFx",
+        "type": "Entry",
+        "createdAt": "2023-02-09T21:24:05.656Z",
+        "updatedAt": "2023-02-09T21:24:17.244Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2023-02-09T21:24:17.244Z",
+        "firstPublishedAt": "2023-02-09T21:24:17.244Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "paragraph"
+          }
+        }
+      },
+      "fields": {
+        "body": {
+          "en-US": "Esse deserunt in mollit qui exercitation. Ex elit laborum nulla Lorem elit velit et dolor aute. Amet adipisicing incididunt dolore proident non minim ad nisi ad aute pariatur."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "abm9he3ijxmu"
+          }
+        },
+        "id": "3eHEdGZtwhjdmcrqmg9qox",
+        "type": "Entry",
+        "createdAt": "2023-02-09T21:24:20.471Z",
+        "updatedAt": "2023-02-09T21:24:30.067Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2023-02-09T21:24:30.067Z",
+        "firstPublishedAt": "2023-02-09T21:24:30.067Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "paragraph"
+          }
+        }
+      },
+      "fields": {
+        "body": {
+          "en-US": "Commodo sunt veniam pariatur cupidatat et esse tempor occaecat tempor dolore irure enim. Sint ullamco culpa do eiusmod reprehenderit dolor laborum et do in cillum tempor. Consequat nostrud dolore qui aliquip fugiat magna ea eiusmod ipsum. Lorem aliquip consequat duis deserunt nulla aliquip sint ut aliquip nulla mollit."
         }
       }
     }
