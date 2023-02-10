@@ -3,7 +3,7 @@ import { Icon } from './Icon';
 
 export const Callout: React.FC<CalloutProps> = (props) => {
     return (
-        <div className="section flex space-x-3 justify-start items-baseline p-4 bg-slate-100 border border-slate-200 rounded-sm">
+        <div className="section flex space-x-3 justify-start items-baseline p-4 bg-slate-100 border border-slate-200 rounded-md">
             <span className="w-4 block relative top-[.125rem]">
                 <Icon.Info />
             </span>
