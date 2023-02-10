@@ -27,10 +27,12 @@ const ComposablePage = ({ page }: { page: Page }) => {
                 <title>{page.title}</title>
             </Head>
 
-            <main>
-                <h1>{page.title}</h1>
-            </main>
-            <main>
+            <main className="max-w-4xl mx-auto py-12">
+                <div className="mb-6">
+                    <h1 className="mb-2">{page.title}</h1>
+                    <p className="text-2xl text-slate-700 font-normal">{page.description}</p>
+                </div>
+
                 {page.sections?.map((section, index) => (
                     <DynamicComponent key={index} {...section} />
                 ))}
