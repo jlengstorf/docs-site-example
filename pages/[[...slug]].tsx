@@ -1,7 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
 
-import { getPageBySlug, getPages, resolveFields } from '@utils/contentful-utils';
+import { getPageBySlug, getPages, resolveFields } from '@/utils/contentful';
 import { Page } from '@/types';
 import { getComponent } from '@/utils/component-utils';
 

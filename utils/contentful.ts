@@ -1,4 +1,4 @@
-import { createClient, Entry } from 'contentful';
+import { createClient } from 'contentful';
 import { Contentful } from '@/types';
 import { IS_DEV, PAGE_CONTENT_TYPE } from '@utils/constants';
 
