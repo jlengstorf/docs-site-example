@@ -3,7 +3,7 @@ import Head from 'next/head';
 
 import { getPageBySlug, getPages, resolveFields } from '@/utils/contentful';
 import { Page } from '@/types';
-import { getComponent } from '@/utils/component-utils';
+import { DynamicComponent } from '@/components/DynamicComponent';
 
 export const getStaticPaths: GetStaticPaths = async () => {
     const pages = await getPages();
@@ -31,10 +31,9 @@ const ComposablePage = ({ page }: { page: Page }) => {
                 <h1>{page.title}</h1>
             </main>
             <main>
-                {page.sections?.map((section, index) => {
-                    const Component = getComponent(section._type);
-                    return <Component key={index} {...section} />;
-                })}
+                {page.sections?.map((section, index) => (
+                    <DynamicComponent key={index} {...section} />
+                ))}
             </main>
         </>
     );

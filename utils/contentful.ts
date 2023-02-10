@@ -1,6 +1,6 @@
 import { createClient } from 'contentful';
 import { Contentful } from '@/types';
-import { IS_DEV, PAGE_CONTENT_TYPE } from '@utils/constants';
+import { IS_DEV, PAGE_CONTENT_TYPE } from '@/utils/constants';
 
 const client = createClient({
     accessToken: IS_DEV ? process.env.CONTENTFUL_PREVIEW_TOKEN! : process.env.CONTENTFUL_DELIVERY_TOKEN!,
