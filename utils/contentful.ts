@@ -1,5 +1,11 @@
 import { createClient } from 'contentful';
-import { Contentful } from '@/types';
+import { unified } from 'unified';
+import rehypeSanitize from 'rehype-sanitize';
+import rehypeStringify from 'rehype-stringify';
+import remarkParse from 'remark-parse';
+import remarkRehype from 'remark-rehype';
+
+import { Contentful, SectionType } from '@/types';
 import { IS_DEV, PAGE_CONTENT_TYPE } from '@/utils/constants';
 
 const client = createClient({
@@ -29,21 +35,28 @@ export async function getPageBySlug(slug: string): Promise<Contentful.TypePage |
 
 // ---------------------------------------- | Field Resolvers
 
+const markdownFieldMap: { [K in SectionType]?: string[] } = {
+    paragraph: ['body']
+};
+
 /**
  * Resolves field values for a Contentful object, including nested references.
  *
  * @param entry Entry object from Contentful
  * @returns An object of resolved values for the entry
  */
-export function resolveFields(entry: any): any {
-    return {
-        ...Object.entries(entry.fields).reduce((acc: any, [key, value]) => {
-            acc[key] = parseField(value);
-            return acc;
-        }, {}),
-        _id: entry.sys?.id,
-        _type: entry.sys?.contentType?.sys.id || entry.sys?.type
-    };
+export async function resolveFields(entry: any): Promise<any> {
+    // Meta attributes
+    const _id = entry.sys?.id;
+    const _type = entry.sys?.contentType?.sys.id || entry.sys?.type;
+    // Process fields
+    let fields: { [key: string]: any } = {};
+    for (const [key, value] of Object.entries(entry.fields)) {
+        const processedValue = await parseField(value, _type, key);
+        fields[key] = processedValue;
+    }
+
+    return { ...fields, _id, _type };
 }
 
 /**
@@ -52,11 +65,26 @@ export function resolveFields(entry: any): any {
  * @param value Value stored for a particular field in a Contentful object
  * @returns Resolved values for the field
  */
-function parseField(value: any) {
+async function parseField(value: any, contentType: SectionType, fieldName: string) {
     // Individual reference value
-    if (typeof value === 'object' && value.sys) return resolveFields(value);
+    if (typeof value === 'object' && value.sys) {
+        return await resolveFields(value);
+    }
     // Array of references
-    if (Array.isArray(value)) return value.map(resolveFields);
+    if (Array.isArray(value)) {
+        let result = [];
+        for (const item of value) result.push(await resolveFields(item));
+        return result;
+    }
+    // Process markdown
+    if ((markdownFieldMap[contentType] || []).includes(fieldName)) {
+        return await parseMarkdown(value);
+    }
     // Everything else passes through.
     return value;
+}
+
+async function parseMarkdown(rawMarkdown: string): Promise<string> {
+    const output = await unified().use(remarkParse).use(remarkRehype).use(rehypeSanitize).use(rehypeStringify).process(rawMarkdown);
+    return String(output);
 }

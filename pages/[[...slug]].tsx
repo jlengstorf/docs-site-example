@@ -14,7 +14,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
     const urlPath = ([params?.slug] || ['/']).flat().join('/') || '/';
     const pageEntry = await getPageBySlug(urlPath);
-    const page: Page = resolveFields(pageEntry);
+    const page: Page = await resolveFields(pageEntry);
     return { props: { page } };
 };
 

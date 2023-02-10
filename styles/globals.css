@@ -3,8 +3,46 @@
 @tailwind utilities;
 
 @layer base {
+    * {
+        @apply leading-normal;
+    }
+
     h1 {
         @apply text-4xl
-          font-bold;
+            font-bold;
+    }
+
+    code {
+        @apply border
+            inline-block
+            leading-none
+            px-2
+            py-[1px]
+            rounded-md
+            text-sm
+          bg-slate-100
+          border-slate-200;
+    }
+
+    a {
+        @apply relative
+            text-indigo-600;
+    }
+
+    a:hover:before {
+        @apply h-[.35rem];
+    }
+
+    a:before {
+        @apply absolute
+          bg-indigo-200
+            bottom-[-.125rem]
+            duration-300
+            h-[.125rem]
+            transition-all
+            w-full
+            z-[-1];
+
+        content: '';
     }
 }
