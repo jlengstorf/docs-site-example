@@ -12,6 +12,16 @@
             font-bold;
     }
 
+    h2 {
+        @apply text-2xl
+            font-bold;
+    }
+
+    h3 {
+        @apply text-xl
+            font-bold;
+    }
+
     code {
         @apply border
             inline-block
@@ -52,5 +62,12 @@
 
     svg path {
         fill: currentColor;
+    }
+}
+
+@layer components {
+    .section {
+        @apply last:mb-0
+            mb-5;
     }
 }

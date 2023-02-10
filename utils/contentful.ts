@@ -1,9 +1,5 @@
 import { createClient } from 'contentful';
-import { unified } from 'unified';
-import rehypeSanitize from 'rehype-sanitize';
-import rehypeStringify from 'rehype-stringify';
-import remarkParse from 'remark-parse';
-import remarkRehype from 'remark-rehype';
+import MarkdownIt from 'markdown-it';
 
 import { Contentful, SectionType } from '@/types';
 import { IS_DEV, PAGE_CONTENT_TYPE } from '@/utils/constants';
@@ -85,6 +81,6 @@ async function parseField(value: any, contentType: SectionType, fieldName: strin
 }
 
 async function parseMarkdown(rawMarkdown: string): Promise<string> {
-    const output = await unified().use(remarkParse).use(remarkRehype).use(rehypeSanitize).use(rehypeStringify).process(rawMarkdown);
-    return String(output);
+    const md = new MarkdownIt();
+    return md.renderInline(rawMarkdown);
 }

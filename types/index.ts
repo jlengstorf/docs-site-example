@@ -15,7 +15,7 @@ export type Callout = Section<Contentful.TypeCalloutFields, 'callout'>;
 export type CodeBlock = Section<Contentful.TypeCodeBlockFields, 'codeBlock'>;
 export type Heading = Section<Contentful.TypeHeadingFields, 'heading'>;
 export type Image = Section<Contentful.TypeImageFields, 'image'>;
-export type List = Section<Contentful.TypeListFields, 'list'>;
+export type List = Omit<Section<Contentful.TypeListFields, 'list'>, 'items'> & { items: Array<Paragraph> };
 export type Paragraph = Section<Contentful.TypeParagraphFields, 'paragraph'>;
 
 export type Page = Omit<Contentful.TypePageFields, 'sections'> & MetaFields & { _type: 'page'; sections?: ComposableSection[] };
