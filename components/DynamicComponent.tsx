@@ -3,7 +3,11 @@ import dynamic from 'next/dynamic';
 import { ComponentType } from 'react';
 
 const componentsMap: { [P in ComposableSection as P['_type']]: ComponentType<P> } = {
+    callout: dynamic(() => import('./Callout').then((mod) => mod.Callout)),
+    codeBlock: dynamic(() => import('./CodeBlock').then((mod) => mod.CodeBlock)),
     heading: dynamic(() => import('./Heading').then((mod) => mod.Heading)),
+    image: dynamic(() => import('./Image').then((mod) => mod.Image)),
+    list: dynamic(() => import('./List').then((mod) => mod.List)),
     paragraph: dynamic(() => import('./Paragraph').then((mod) => mod.Paragraph))
 };
 
