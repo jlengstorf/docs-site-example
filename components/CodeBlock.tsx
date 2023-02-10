@@ -8,7 +8,7 @@ export const CodeBlock: React.FC<CodeBlockProps> = (props) => {
                     <span className="font-mono text-xs font-bold text-slate-500">{props.label}</span>
                 </div>
             )}
-            <pre className="pb-6 pt-4 px-4 overflow-x-scroll">
+            <pre className="p-4 overflow-x-scroll">
                 <code className={`language-${props.code.language} bg-transparent border-none p-0`} dangerouslySetInnerHTML={{ __html: props.code.html }} />
             </pre>
         </div>
