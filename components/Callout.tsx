@@ -7,7 +7,7 @@ export const Callout: React.FC<CalloutProps> = (props) => {
             <span className="w-6 block relative top-[.5rem] flex-shrink-0 text-slate-400">
                 <Icon.Info />
             </span>
-            <span className="block">{props.body}</span>
+            <span className="block" dangerouslySetInnerHTML={{ __html: props.body }} />
         </div>
     );
 };
