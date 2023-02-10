@@ -1,7 +1,6 @@
 import { createClient, Entry } from 'contentful';
 import { Contentful } from '@/types';
 import { IS_DEV, PAGE_CONTENT_TYPE } from '@utils/constants';
-import { SectionType } from './component-utils';
 
 const client = createClient({
     accessToken: IS_DEV ? process.env.CONTENTFUL_PREVIEW_TOKEN! : process.env.CONTENTFUL_DELIVERY_TOKEN!,
@@ -38,12 +37,12 @@ export async function getPageBySlug(slug: string): Promise<Contentful.TypePage |
  */
 export function resolveFields(entry: any): any {
     return {
-        _id: entry.sys?.id,
-        _type: entry.sys?.contentType?.sys.id || entry.sys?.type,
-        fields: Object.entries(entry.fields).reduce((acc: any, [key, value]) => {
+        ...Object.entries(entry.fields).reduce((acc: any, [key, value]) => {
             acc[key] = parseField(value);
             return acc;
-        }, {})
+        }, {}),
+        _id: entry.sys?.id,
+        _type: entry.sys?.contentType?.sys.id || entry.sys?.type
     };
 }
 
