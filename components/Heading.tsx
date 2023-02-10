@@ -3,7 +3,7 @@ import { Heading as HeadingProps } from '@/types';
 const headingTagMap: {
     [K in HeadingProps['level']]: { tagName: React.ElementType; className: string };
 } = {
-    '1': { tagName: 'h1', className: 'mb-4 mt-12' },
+    '1': { tagName: 'h1', className: 'text-3xl mb-3 mt-12' },
     '2': { tagName: 'h2', className: 'mb-3 mt-10' },
     '3': { tagName: 'h3', className: 'mb-1 mt-8' },
     '4': { tagName: 'h4', className: 'mb-1 mt-6' },
