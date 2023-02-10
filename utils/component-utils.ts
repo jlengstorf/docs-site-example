@@ -1,6 +1,5 @@
+import { SectionType } from '@/types';
 import dynamic from 'next/dynamic';
-
-export type SectionType = 'heading' | 'paragraph';
 
 const components = {
     heading: dynamic(() => import('../components/Heading').then((mod) => mod.Heading)),

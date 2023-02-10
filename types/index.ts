@@ -6,7 +6,9 @@ type MetaFields = {
     _id: string;
 };
 
-export type Section<Fields, TypeValue> = Fields & MetaFields & { _type: TypeValue };
+export type SectionType = 'heading' | 'paragraph';
+
+export type Section<Fields, TypeValue extends SectionType> = Fields & MetaFields & { _type: TypeValue };
 
 export type Heading = Section<Contentful.TypeHeadingFields, 'heading'>;
 export type Paragraph = Section<Contentful.TypeParagraphFields, 'paragraph'>;
