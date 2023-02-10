@@ -1,5 +1,5 @@
 import { createClient, Entry } from 'contentful';
-import { TypePage, TypePageFields } from '@/types';
+import { Contentful } from '@/types';
 import { IS_DEV, PAGE_CONTENT_TYPE } from '@utils/constants';
 import { SectionType } from './component-utils';
 
@@ -12,8 +12,8 @@ const client = createClient({
 /**
  * Return an array of raw pages from Contentful.
  */
-export async function getPages(): Promise<TypePage[]> {
-    const entries = await client.getEntries<TypePageFields>({ content_type: PAGE_CONTENT_TYPE, include: 10 });
+export async function getPages(): Promise<Contentful.TypePage[]> {
+    const entries = await client.getEntries<Contentful.TypePageFields>({ content_type: PAGE_CONTENT_TYPE, include: 10 });
     return entries.items;
 }
 
@@ -23,23 +23,12 @@ export async function getPages(): Promise<TypePage[]> {
  * @param slug String used to match the path in contentful
  * @returns An entry, if it could be found
  */
-export async function getPageBySlug(slug: string): Promise<TypePage | undefined> {
+export async function getPageBySlug(slug: string): Promise<Contentful.TypePage | undefined> {
     const pages = await getPages();
     return pages.find((page) => page.fields.slug === slug);
 }
 
 // ---------------------------------------- | Field Resolvers
-
-export type MetaFields = {
-    _id: string;
-    _type: SectionType;
-};
-
-export type ResolvedPage = MetaFields & {
-    fields: TypePageFields & { sections?: Array<TypePageFields['sections'] & { _id: string; _type: SectionType }> };
-};
-
-export interface ResolvedSection {}
 
 /**
  * Resolves field values for a Contentful object, including nested references.
@@ -47,7 +36,7 @@ export interface ResolvedSection {}
  * @param entry Entry object from Contentful
  * @returns An object of resolved values for the entry
  */
-export function resolveFields<FieldType>(entry: any): { _id: string; _type: string; fields: FieldType } | null {
+export function resolveFields(entry: any): any {
     return {
         _id: entry.sys?.id,
         _type: entry.sys?.contentType?.sys.id || entry.sys?.type,
@@ -66,7 +55,7 @@ export function resolveFields<FieldType>(entry: any): { _id: string; _type: stri
  */
 function parseField(value: any) {
     // Individual reference value
-    if (typeof value === 'object' && value.sys) return resolveFields<unknown>(value);
+    if (typeof value === 'object' && value.sys) return resolveFields(value);
     // Array of references
     if (Array.isArray(value)) return value.map(resolveFields);
     // Everything else passes through.

@@ -1,7 +1,7 @@
-import { TypeHeadingFields } from '@/types';
+import { Heading as HeadingProps } from '@/types';
 
 const headingTagMap: {
-    [K in TypeHeadingFields['level']]: React.ElementType;
+    [K in HeadingProps['level']]: React.ElementType;
 } = {
     '1': 'h1',
     '2': 'h2',
@@ -11,7 +11,7 @@ const headingTagMap: {
     '6': 'h6'
 };
 
-export const Heading: React.FC<TypeHeadingFields> = (props) => {
+export const Heading: React.FC<HeadingProps> = (props) => {
     const TagName = headingTagMap[props.level];
     return <TagName>{props.body}</TagName>;
 };

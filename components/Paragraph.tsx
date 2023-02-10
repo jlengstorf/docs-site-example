@@ -1,5 +1,5 @@
-import { TypeParagraphFields } from '@/types';
+import { Paragraph as ParagraphProps } from '@/types';
 
-export const Paragraph: React.FC<TypeParagraphFields> = (props) => {
+export const Paragraph: React.FC<ParagraphProps> = (props) => {
     return <p>{props.body}</p>;
 };
