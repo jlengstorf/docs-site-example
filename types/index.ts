@@ -13,7 +13,7 @@ export type ComposableSection = Callout | CodeBlock | Heading | Image | List | P
 export type Section<Fields, TypeValue extends SectionType> = Fields & MetaFields & { _type: TypeValue };
 
 export type Callout = Section<Contentful.TypeCalloutFields, 'callout'>;
-export type CodeBlock = Section<Contentful.TypeCodeBlockFields, 'codeBlock'>;
+export type CodeBlock = Section<Contentful.TypeCodeBlockFields, 'codeBlock'> & { code: { html: string; language: 'js' | 'ts' | 'txt' } };
 export type Heading = Section<Contentful.TypeHeadingFields, 'heading'>;
 export type Image = Omit<Section<Contentful.TypeImageFields, 'image'>, 'image'> & { image: ContentfulTypes.Asset['fields'] };
 export type List = Omit<Section<Contentful.TypeListFields, 'list'>, 'items'> & { items: Array<Paragraph> };
