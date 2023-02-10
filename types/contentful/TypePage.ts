@@ -8,8 +8,8 @@ import { TypeParagraphFields } from "./TypeParagraph";
 
 export interface TypePageFields {
     title: Contentful.EntryFields.Symbol;
-    description: Contentful.EntryFields.Text;
     slug: Contentful.EntryFields.Symbol;
+    description: Contentful.EntryFields.Text;
     sections?: Contentful.Entry<TypeCalloutFields | TypeCodeBlockFields | TypeHeadingFields | TypeImageFields | TypeListFields | TypeParagraphFields>[];
 }
 

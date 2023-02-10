@@ -47,6 +47,10 @@ export async function resolveFields(entry: any): Promise<any> {
     // Meta attributes
     const _id = entry.sys?.id;
     const _type = entry.sys?.contentType?.sys.id || entry.sys?.type;
+    // Escape if missing fields.
+    if (!entry.fields) {
+        throw new Error(`Could not resolve fields for entry: ${_id}`);
+    }
     // Process fields
     let fields: { [key: string]: any } = {};
     for (const [key, value] of Object.entries(entry.fields)) {
