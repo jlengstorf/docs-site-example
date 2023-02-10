@@ -12,7 +12,7 @@
         "id": "page",
         "type": "ContentType",
         "createdAt": "2023-02-09T19:22:50.397Z",
-        "updatedAt": "2023-02-09T21:23:23.113Z",
+        "updatedAt": "2023-02-10T15:16:19.757Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -20,8 +20,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2023-02-09T21:23:23.113Z",
+        "publishedVersion": 11,
+        "publishedAt": "2023-02-10T15:16:19.757Z",
         "firstPublishedAt": "2023-02-09T19:22:50.704Z",
         "createdBy": {
           "sys": {
@@ -37,8 +37,8 @@
             "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
-        "publishedCounter": 3,
-        "version": 6,
+        "publishedCounter": 6,
+        "version": 12,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -55,6 +55,17 @@
           "id": "title",
           "name": "Title",
           "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "Text",
           "localized": false,
           "required": true,
           "validations": [
@@ -89,7 +100,11 @@
               {
                 "linkContentType": [
                   "heading",
-                  "paragraph"
+                  "paragraph",
+                  "callout",
+                  "codeBlock",
+                  "image",
+                  "list"
                 ]
               }
             ],
@@ -174,7 +189,7 @@
         "id": "heading",
         "type": "ContentType",
         "createdAt": "2023-02-09T21:22:49.362Z",
-        "updatedAt": "2023-02-09T21:22:49.612Z",
+        "updatedAt": "2023-02-10T14:54:42.279Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -182,8 +197,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2023-02-09T21:22:49.612Z",
+        "publishedVersion": 3,
+        "publishedAt": "2023-02-10T14:54:42.279Z",
         "firstPublishedAt": "2023-02-09T21:22:49.612Z",
         "createdBy": {
           "sys": {
@@ -199,8 +214,8 @@
             "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 2,
+        "version": 4,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -247,6 +262,451 @@
           },
           "disabled": false,
           "omitted": false
+        },
+        {
+          "id": "badge",
+          "name": "Badge",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "badge"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "abm9he3ijxmu"
+          }
+        },
+        "id": "badge",
+        "type": "ContentType",
+        "createdAt": "2023-02-10T14:53:24.408Z",
+        "updatedAt": "2023-02-10T14:53:57.028Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2023-02-10T14:53:57.028Z",
+        "firstPublishedAt": "2023-02-10T14:53:24.813Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Badge",
+      "description": "Small label often used in conjunction with another component",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "abm9he3ijxmu"
+          }
+        },
+        "id": "codeBlock",
+        "type": "ContentType",
+        "createdAt": "2023-02-10T14:59:01.044Z",
+        "updatedAt": "2023-02-10T15:12:24.406Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2023-02-10T15:12:24.406Z",
+        "firstPublishedAt": "2023-02-10T14:59:01.540Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Code Block",
+      "description": "A block of code with an optional label",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "body",
+          "name": "Body",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "label",
+          "name": "Label",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "language",
+          "name": "Language",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "in": [
+                "JavaScript",
+                "TypeScript",
+                "Plain Text"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "abm9he3ijxmu"
+          }
+        },
+        "id": "image",
+        "type": "ContentType",
+        "createdAt": "2023-02-10T15:00:11.275Z",
+        "updatedAt": "2023-02-10T15:00:11.853Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-02-10T15:00:11.853Z",
+        "firstPublishedAt": "2023-02-10T15:00:11.853Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Image",
+      "description": "Image with style and caption options",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "image",
+          "name": "Image",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "hideCaption",
+          "name": "Hide Caption",
+          "type": "Boolean",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": false
+          },
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "abm9he3ijxmu"
+          }
+        },
+        "id": "callout",
+        "type": "ContentType",
+        "createdAt": "2023-02-10T15:01:08.335Z",
+        "updatedAt": "2023-02-10T15:10:45.781Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2023-02-10T15:10:45.781Z",
+        "firstPublishedAt": "2023-02-10T15:01:08.754Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 6,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        }
+      },
+      "displayField": "body",
+      "name": "Callout",
+      "description": "Text to call out in the body of a page",
+      "fields": [
+        {
+          "id": "body",
+          "name": "Body",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "abm9he3ijxmu"
+          }
+        },
+        "id": "list",
+        "type": "ContentType",
+        "createdAt": "2023-02-10T15:15:00.492Z",
+        "updatedAt": "2023-02-10T15:15:52.579Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2023-02-10T15:15:52.579Z",
+        "firstPublishedAt": "2023-02-10T15:15:00.852Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "List",
+      "description": "A list of text items",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "items",
+          "name": "Items",
+          "type": "Array",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "paragraph"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "listType",
+          "name": "List Type",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "in": [
+                "ordered",
+                "unordered"
+              ]
+            }
+          ],
+          "defaultValue": {
+            "en-US": "unordered"
+          },
+          "disabled": false,
+          "omitted": false
         }
       ]
     }
@@ -265,7 +725,7 @@
             "linkType": "Space"
           }
         },
-        "version": 6,
+        "version": 12,
         "createdAt": "2023-02-09T19:22:50.813Z",
         "createdBy": {
           "sys": {
@@ -274,7 +734,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2023-02-09T21:23:23.538Z",
+        "updatedAt": "2023-02-10T15:16:20.769Z",
         "updatedBy": {
           "sys": {
             "id": "7zhoOzOJYq0RqY5mshy4HK",
@@ -301,6 +761,11 @@
         {
           "fieldId": "title",
           "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "markdown",
           "widgetNamespace": "builtin"
         },
         {
@@ -380,7 +845,7 @@
             "linkType": "Space"
           }
         },
-        "version": 2,
+        "version": 4,
         "createdAt": "2023-02-09T21:22:49.676Z",
         "createdBy": {
           "sys": {
@@ -389,7 +854,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2023-02-09T21:22:49.993Z",
+        "updatedAt": "2023-02-10T14:54:43.208Z",
         "updatedBy": {
           "sys": {
             "id": "7zhoOzOJYq0RqY5mshy4HK",
@@ -422,6 +887,307 @@
           "fieldId": "level",
           "widgetId": "dropdown",
           "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "badge",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "abm9he3ijxmu",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 4,
+        "createdAt": "2023-02-10T14:53:24.921Z",
+        "createdBy": {
+          "sys": {
+            "id": "7zhoOzOJYq0RqY5mshy4HK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-02-10T14:53:58.230Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7zhoOzOJYq0RqY5mshy4HK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "badge",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "abm9he3ijxmu",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 8,
+        "createdAt": "2023-02-10T14:59:01.852Z",
+        "createdBy": {
+          "sys": {
+            "id": "7zhoOzOJYq0RqY5mshy4HK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-02-10T15:12:25.078Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7zhoOzOJYq0RqY5mshy4HK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "codeBlock",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "body",
+          "widgetId": "multipleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "label",
+          "settings": {
+            "helpText": "Label to show above the code block"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "language",
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "abm9he3ijxmu",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2023-02-10T15:00:11.962Z",
+        "createdBy": {
+          "sys": {
+            "id": "7zhoOzOJYq0RqY5mshy4HK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-02-10T15:00:12.725Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7zhoOzOJYq0RqY5mshy4HK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "image",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "image",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "hideCaption",
+          "widgetId": "boolean",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "abm9he3ijxmu",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 12,
+        "createdAt": "2023-02-10T15:01:08.871Z",
+        "createdBy": {
+          "sys": {
+            "id": "7zhoOzOJYq0RqY5mshy4HK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-02-10T15:10:48.805Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7zhoOzOJYq0RqY5mshy4HK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "callout",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "body",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "abm9he3ijxmu",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 4,
+        "createdAt": "2023-02-10T15:15:00.963Z",
+        "createdBy": {
+          "sys": {
+            "id": "7zhoOzOJYq0RqY5mshy4HK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-02-10T15:15:53.190Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7zhoOzOJYq0RqY5mshy4HK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "list",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "settings": {
+            "helpText": "This is only used in the CMS"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "items",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "listType",
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
         }
       ]
     }
@@ -443,7 +1209,7 @@
         "id": "1hRHqEg9NF9VzmlpQCAUlg",
         "type": "Entry",
         "createdAt": "2023-02-09T19:24:46.954Z",
-        "updatedAt": "2023-02-09T19:25:51.051Z",
+        "updatedAt": "2023-02-10T15:19:38.943Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -451,8 +1217,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2023-02-09T19:25:51.051Z",
+        "publishedVersion": 22,
+        "publishedAt": "2023-02-10T15:19:38.943Z",
         "firstPublishedAt": "2023-02-09T19:25:47.358Z",
         "createdBy": {
           "sys": {
@@ -468,8 +1234,8 @@
             "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
-        "publishedCounter": 2,
-        "version": 6,
+        "publishedCounter": 3,
+        "version": 23,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -489,10 +1255,94 @@
       },
       "fields": {
         "title": {
-          "en-US": "My Test Page"
+          "en-US": "The Setup Intents API"
+        },
+        "description": {
+          "en-US": "Learn more about the Setup Intents API for saving payment methods."
         },
         "slug": {
-          "en-US": "my-test-page"
+          "en-US": "test-01"
+        },
+        "sections": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "78FrymqSQLiJ2F2fAwUuxT"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "bRxyEJ8Q8Bqk5QnnQbwDL"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5c9ZOsIh4qeaCzm4rhHf3C"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2cWToQbQraz0puupCRUQwL"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4A4mw1WlacHHf0DHgLJOQH"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5s5zX9ZAz3b4eOndXoRSiu"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4SiuBqweUmH2uhTtNznn81"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "1yyL4vHw8v2hbuFB74799u"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "35rHcuIwllvZ75eplVbHmi"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2ZZKtRejSshiBxonK0Ghj"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3w1kNYFQkdf1HHykNwUbZ0"
+              }
+            }
+          ]
         }
       }
     },
@@ -790,9 +1640,1137 @@
           "en-US": "Commodo sunt veniam pariatur cupidatat et esse tempor occaecat tempor dolore irure enim. Sint ullamco culpa do eiusmod reprehenderit dolor laborum et do in cillum tempor. Consequat nostrud dolore qui aliquip fugiat magna ea eiusmod ipsum. Lorem aliquip consequat duis deserunt nulla aliquip sint ut aliquip nulla mollit."
         }
       }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "abm9he3ijxmu"
+          }
+        },
+        "id": "2cWToQbQraz0puupCRUQwL",
+        "type": "Entry",
+        "createdAt": "2023-02-10T15:06:07.962Z",
+        "updatedAt": "2023-02-10T15:09:22.983Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2023-02-10T15:09:22.983Z",
+        "firstPublishedAt": "2023-02-10T15:09:22.983Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "heading"
+          }
+        }
+      },
+      "fields": {
+        "body": {
+          "en-US": "Saving and reusing payment methods"
+        },
+        "level": {
+          "en-US": "2"
+        },
+        "badge": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5BQMmkotVHGNlOczwtZiXY"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "abm9he3ijxmu"
+          }
+        },
+        "id": "78FrymqSQLiJ2F2fAwUuxT",
+        "type": "Entry",
+        "createdAt": "2023-02-10T15:06:56.156Z",
+        "updatedAt": "2023-02-10T15:19:25.435Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2023-02-10T15:19:25.435Z",
+        "firstPublishedAt": "2023-02-10T15:07:06.612Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "paragraph"
+          }
+        }
+      },
+      "fields": {
+        "body": {
+          "en-US": "Use the [Setup Intents API](https://stripe.com/docs/strong-customer-authentication) to set up a payment method for __future payments__. It’s similar to a *payment*, but no charge is created. Set up a `payment` method for future payments now."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "abm9he3ijxmu"
+          }
+        },
+        "id": "bRxyEJ8Q8Bqk5QnnQbwDL",
+        "type": "Entry",
+        "createdAt": "2023-02-10T15:07:18.050Z",
+        "updatedAt": "2023-02-10T15:07:25.609Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2023-02-10T15:07:25.609Z",
+        "firstPublishedAt": "2023-02-10T15:07:25.609Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "paragraph"
+          }
+        }
+      },
+      "fields": {
+        "body": {
+          "en-US": "The goal is to have payment credentials saved and optimized for future payments, meaning the payment method is configured correctly for any scenario. When setting up a card, for example, it may be necessary to authenticate the customer or check the card’s validity with the customer’s bank. Stripe updates the SetupIntent object throughout that process."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "abm9he3ijxmu"
+          }
+        },
+        "id": "5c9ZOsIh4qeaCzm4rhHf3C",
+        "type": "Entry",
+        "createdAt": "2023-02-10T15:07:51.188Z",
+        "updatedAt": "2023-02-10T15:08:34.800Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2023-02-10T15:08:34.800Z",
+        "firstPublishedAt": "2023-02-10T15:08:34.800Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "image"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "This is an example image"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "4aIq3uJKAv71CbwjcdmMd6"
+            }
+          }
+        },
+        "hideCaption": {
+          "en-US": false
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "abm9he3ijxmu"
+          }
+        },
+        "id": "5BQMmkotVHGNlOczwtZiXY",
+        "type": "Entry",
+        "createdAt": "2023-02-10T15:09:01.507Z",
+        "updatedAt": "2023-02-10T15:09:09.703Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2023-02-10T15:09:09.703Z",
+        "firstPublishedAt": "2023-02-10T15:09:09.703Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "badge"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "experimental"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "abm9he3ijxmu"
+          }
+        },
+        "id": "4A4mw1WlacHHf0DHgLJOQH",
+        "type": "Entry",
+        "createdAt": "2023-02-10T15:09:42.259Z",
+        "updatedAt": "2023-02-10T15:09:50.367Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2023-02-10T15:09:50.367Z",
+        "firstPublishedAt": "2023-02-10T15:09:50.367Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "callout"
+          }
+        }
+      },
+      "fields": {
+        "body": {
+          "en-US": "You can set up payment methods for future use with Checkout too."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "abm9he3ijxmu"
+          }
+        },
+        "id": "2ZZKtRejSshiBxonK0Ghj",
+        "type": "Entry",
+        "createdAt": "2023-02-10T15:10:53.194Z",
+        "updatedAt": "2023-02-10T15:12:52.485Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2023-02-10T15:12:52.485Z",
+        "firstPublishedAt": "2023-02-10T15:12:52.485Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "codeBlock"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Page Code Example"
+        },
+        "body": {
+          "en-US": "import { GetStaticPaths, GetStaticProps } from 'next';\nimport Head from 'next/head';\n\nimport { getPageBySlug, getPages, resolveFields } from '@/utils/contentful';\nimport { Page } from '@/types';\nimport { DynamicComponent } from '@/components/DynamicComponent';\n\nexport const getStaticPaths: GetStaticPaths = async () => {\n    const pages = await getPages();\n    const paths = pages.map((page) => page.fields.slug).map((slug) => (slug.startsWith('/') ? slug : `/${slug}`));\n    return { paths, fallback: false };\n};\n\nexport const getStaticProps: GetStaticProps = async ({ params }) => {\n    const urlPath = ([params?.slug] || ['/']).flat().join('/') || '/';\n    const pageEntry = await getPageBySlug(urlPath);\n    const page: Page = resolveFields(pageEntry);\n    return { props: { page } };\n};\n\nconst ComposablePage = ({ page }: { page: Page }) => {\n    if (!page) return null;\n\n    return (\n        <>\n            <Head>\n                <title>{page.title}</title>\n            </Head>\n\n            <main>\n                <h1>{page.title}</h1>\n            </main>\n            <main>\n                {page.sections?.map((section, index) => (\n                    <DynamicComponent key={index} {...section} />\n                ))}\n            </main>\n        </>\n    );\n};\n\nexport default ComposablePage;\n"
+        },
+        "label": {
+          "en-US": "pages/[[...slug]].jsx"
+        },
+        "language": {
+          "en-US": "TypeScript"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "abm9he3ijxmu"
+          }
+        },
+        "id": "35rHcuIwllvZ75eplVbHmi",
+        "type": "Entry",
+        "createdAt": "2023-02-10T15:13:00.515Z",
+        "updatedAt": "2023-02-10T15:13:19.368Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2023-02-10T15:13:19.368Z",
+        "firstPublishedAt": "2023-02-10T15:13:19.368Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "paragraph"
+          }
+        }
+      },
+      "fields": {
+        "body": {
+          "en-US": "For users impacted by SCA, this agreement helps payments succeed without interruption. When you set up your integration to properly save a card, Stripe marks any subsequent off-session payment as a merchant-initiated transaction (MIT) so that your customers don’t have to come back online and authenticate. Merchant-initiated transactions require an agreement between you and your customer."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "abm9he3ijxmu"
+          }
+        },
+        "id": "4SiuBqweUmH2uhTtNznn81",
+        "type": "Entry",
+        "createdAt": "2023-02-10T15:16:30.088Z",
+        "updatedAt": "2023-02-10T15:19:36.084Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2023-02-10T15:19:36.084Z",
+        "firstPublishedAt": "2023-02-10T15:19:36.084Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "list"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "List of Things #1"
+        },
+        "items": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "7isop6TptO9itEpgXFDjAH"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6Sk9Np6LhgKCrabcMYfmmR"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2BHncVEsCvstO6K7Dddnw6"
+              }
+            }
+          ]
+        },
+        "listType": {
+          "en-US": "unordered"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "abm9he3ijxmu"
+          }
+        },
+        "id": "7isop6TptO9itEpgXFDjAH",
+        "type": "Entry",
+        "createdAt": "2023-02-10T15:16:42.926Z",
+        "updatedAt": "2023-02-10T15:16:55.256Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2023-02-10T15:16:55.256Z",
+        "firstPublishedAt": "2023-02-10T15:16:55.256Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "paragraph"
+          }
+        }
+      },
+      "fields": {
+        "body": {
+          "en-US": "The customer’s permission to your initiating a payment or a series of payments on their behalf\n"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "abm9he3ijxmu"
+          }
+        },
+        "id": "6Sk9Np6LhgKCrabcMYfmmR",
+        "type": "Entry",
+        "createdAt": "2023-02-10T15:17:01.142Z",
+        "updatedAt": "2023-02-10T15:17:14.459Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2023-02-10T15:17:14.459Z",
+        "firstPublishedAt": "2023-02-10T15:17:14.459Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "paragraph"
+          }
+        }
+      },
+      "fields": {
+        "body": {
+          "en-US": "The anticipated frequency of payments (that is, one-time or recurring)\n"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "abm9he3ijxmu"
+          }
+        },
+        "id": "2BHncVEsCvstO6K7Dddnw6",
+        "type": "Entry",
+        "createdAt": "2023-02-10T15:17:18.108Z",
+        "updatedAt": "2023-02-10T15:17:29.102Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2023-02-10T15:17:29.102Z",
+        "firstPublishedAt": "2023-02-10T15:17:29.102Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "paragraph"
+          }
+        }
+      },
+      "fields": {
+        "body": {
+          "en-US": "How the payment amount will be determined\n"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "abm9he3ijxmu"
+          }
+        },
+        "id": "5s5zX9ZAz3b4eOndXoRSiu",
+        "type": "Entry",
+        "createdAt": "2023-02-10T15:17:45.749Z",
+        "updatedAt": "2023-02-10T15:18:02.075Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2023-02-10T15:18:02.075Z",
+        "firstPublishedAt": "2023-02-10T15:18:02.075Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "paragraph"
+          }
+        }
+      },
+      "fields": {
+        "body": {
+          "en-US": "For example, credit and debit cards under European SCA regulation may require the customer to authenticate the card during the saving process. Setting usage to off_session properly authenticates a credit or debit card for off-session payments so that your customer doesn’t have to come back online and re-authenticate. So although it creates initial friction in the setup flow, setting usage to off_session can reduce customer intervention in later off-session payments."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "abm9he3ijxmu"
+          }
+        },
+        "id": "1yyL4vHw8v2hbuFB74799u",
+        "type": "Entry",
+        "createdAt": "2023-02-10T15:18:12.163Z",
+        "updatedAt": "2023-02-10T15:18:21.145Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2023-02-10T15:18:21.145Z",
+        "firstPublishedAt": "2023-02-10T15:18:21.145Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "heading"
+          }
+        }
+      },
+      "fields": {
+        "body": {
+          "en-US": "Another Header"
+        },
+        "level": {
+          "en-US": "2"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "abm9he3ijxmu"
+          }
+        },
+        "id": "3w1kNYFQkdf1HHykNwUbZ0",
+        "type": "Entry",
+        "createdAt": "2023-02-10T15:18:35.170Z",
+        "updatedAt": "2023-02-10T15:18:48.308Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2023-02-10T15:18:48.308Z",
+        "firstPublishedAt": "2023-02-10T15:18:48.308Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "paragraph"
+          }
+        }
+      },
+      "fields": {
+        "body": {
+          "en-US": "Follow the guidance on this page to ensure your integration handles cards that require Strong Customer Authentication. Correctly flagging transactions allows Stripe to claim correct SCA exemptions on your behalf to minimize the need for authentication with each payment."
+        }
+      }
     }
   ],
   "assets": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "abm9he3ijxmu"
+          }
+        },
+        "id": "4aIq3uJKAv71CbwjcdmMd6",
+        "type": "Asset",
+        "createdAt": "2023-02-10T15:08:00.496Z",
+        "updatedAt": "2023-02-10T15:08:21.627Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2023-02-10T15:08:21.627Z",
+        "firstPublishedAt": "2023-02-10T15:08:21.627Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Example Image"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/abm9he3ijxmu/4aIq3uJKAv71CbwjcdmMd6/1ca2201c455a7194bf38fe62f8320ce9/reuse-si.2499c9ffdcfc8bd5d430e9a1809890bf.svg",
+            "details": {
+              "size": 62217,
+              "image": {
+                "width": 779,
+                "height": 200
+              }
+            },
+            "fileName": "reuse-si.2499c9ffdcfc8bd5d430e9a1809890bf.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    }
   ],
   "locales": [
     {
