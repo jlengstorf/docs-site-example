@@ -1,3 +1,4 @@
+import * as ContentfulTypes from 'contentful';
 import * as Contentful from './contentful';
 
 export { Contentful };
@@ -14,7 +15,7 @@ export type Section<Fields, TypeValue extends SectionType> = Fields & MetaFields
 export type Callout = Section<Contentful.TypeCalloutFields, 'callout'>;
 export type CodeBlock = Section<Contentful.TypeCodeBlockFields, 'codeBlock'>;
 export type Heading = Section<Contentful.TypeHeadingFields, 'heading'>;
-export type Image = Section<Contentful.TypeImageFields, 'image'>;
+export type Image = Omit<Section<Contentful.TypeImageFields, 'image'>, 'image'> & { image: ContentfulTypes.Asset['fields'] };
 export type List = Omit<Section<Contentful.TypeListFields, 'list'>, 'items'> & { items: Array<Paragraph> };
 export type Paragraph = Section<Contentful.TypeParagraphFields, 'paragraph'>;
 
