@@ -11,3 +11,20 @@ Adding a section:
 1. Add component file
     - Use new section type for props
 1. Add item to `DynamicComponent`
+
+TODO:
+
+-   [ ] Nav from pages
+-   [ ] Hide page from nav
+-   [ ] Table of contents from headings
+-   [ ] Header + site config
+    -   [ ] Dark mode + Github icon
+-   [ ] Simple footer
+-   [ ] Landing page components
+    -   [ ] Hero
+    -   [ ] CardGrid -> Card
+-   [ ] Add landing pages
+    -   [ ] Update script to preserve those pages
+-   [ ] Real content
+-   [ ] Readme instructions
+-   [ ] Wire up Stackbit
