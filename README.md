@@ -14,8 +14,6 @@ Adding a section:
 
 TODO:
 
--   [ ] Nav from pages
--   [ ] Hide page from nav
 -   [ ] Table of contents from headings
 -   [ ] Header + site config
     -   [ ] Dark mode + Github icon

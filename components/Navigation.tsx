@@ -24,7 +24,7 @@ const NavLink: React.FC<NavLinkProps & { topLevel?: boolean }> = (props) => {
 
 export const Navigation: React.FC<{ items: SiteConfig['mainNavigation'] }> = (props) => {
     return (
-        <div className="h-full px-4 py-8 border-r border-slate-200">
+        <div className="h-full px-6 py-8 border-r border-slate-200">
             <ul>
                 {props.items.map((item, index) => (
                     <NavLink key={index} {...item} topLevel={true} />

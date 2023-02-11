@@ -5,6 +5,7 @@ import { getPageBySlug, getPages, getSiteConfig, resolveFields } from '@/utils/c
 import { Page, SiteConfig } from '@/types';
 import { DynamicComponent } from '@/components/DynamicComponent';
 import { Navigation } from '@/components/Navigation';
+import { Header } from '@/components/Header';
 
 export const getStaticPaths: GetStaticPaths = async () => {
     const pages = await getPages();
@@ -32,20 +33,24 @@ const ComposablePage = ({ page, siteConfig }: { page: Page; siteConfig: SiteConf
                 <title>{page.title}</title>
             </Head>
 
-            <main className="flex">
-                <div className="w-[20rem] h-screen">
+            <Header {...siteConfig} />
+
+            <main className="flex overflow-y-hidden h-[calc(100vh-58px)]">
+                <div className="w-[20rem] h-full bg-slate-50">
                     <Navigation items={siteConfig.mainNavigation} />
                 </div>
 
-                <div className="max-w-3xl py-12 mx-auto">
-                    <div className="mb-6">
-                        <h1 className="mb-2">{page.title}</h1>
-                        <p className="text-2xl font-normal text-slate-700">{page.description}</p>
-                    </div>
+                <div className="w-full h-full overflow-y-scroll">
+                    <div className="max-w-3xl py-12 mx-auto">
+                        <div className="mb-6">
+                            <h1 className="mb-2">{page.title}</h1>
+                            <p className="text-2xl font-normal text-slate-700">{page.description}</p>
+                        </div>
 
-                    {page.sections?.map((section, index) => (
-                        <DynamicComponent key={index} {...section} />
-                    ))}
+                        {page.sections?.map((section, index) => (
+                            <DynamicComponent key={index} {...section} />
+                        ))}
+                    </div>
                 </div>
             </main>
         </>
