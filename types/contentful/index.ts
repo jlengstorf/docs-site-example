@@ -4,5 +4,7 @@ export type { TypeCodeBlock, TypeCodeBlockFields } from "./TypeCodeBlock";
 export type { TypeHeading, TypeHeadingFields } from "./TypeHeading";
 export type { TypeImage, TypeImageFields } from "./TypeImage";
 export type { TypeList, TypeListFields } from "./TypeList";
+export type { TypeNavLink, TypeNavLinkFields } from "./TypeNavLink";
 export type { TypePage, TypePageFields } from "./TypePage";
 export type { TypeParagraph, TypeParagraphFields } from "./TypeParagraph";
+export type { TypeSiteConfig, TypeSiteConfigFields } from "./TypeSiteConfig";

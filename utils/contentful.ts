@@ -3,7 +3,7 @@ import MarkdownIt from 'markdown-it';
 import hljs from 'highlight.js';
 
 import { CodeBlock, Contentful, SectionType } from '@/types';
-import { IS_DEV, PAGE_CONTENT_TYPE } from '@/utils/constants';
+import { CONFIG_CONTENT_TYPE, IS_DEV, PAGE_CONTENT_TYPE } from '@/utils/constants';
 import { TypeCodeBlockFields } from '@/types/contentful';
 
 const client = createClient({
@@ -11,6 +11,14 @@ const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID!,
     host: IS_DEV ? 'preview.contentful.com' : 'cdn.contentful.com'
 });
+
+/**
+ * Return the first entry from Contentful of type siteConfig.
+ */
+export async function getSiteConfig(): Promise<Contentful.TypeSiteConfig> {
+    const entries = await client.getEntries<Contentful.TypeSiteConfigFields>({ content_type: CONFIG_CONTENT_TYPE, include: 10 });
+    return entries.items[0];
+}
 
 /**
  * Return an array of raw pages from Contentful.
