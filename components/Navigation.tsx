@@ -6,7 +6,7 @@ export const Navigation: React.FC<{ items: SiteConfig['mainNavigation'] }> = (pr
         <div>
             {props.items.map((item, index) => {
                 return (
-                    <Link href={item.page.slug} key={index}>
+                    <Link href={item.page.urlPath} key={index}>
                         {item.label || item.page.title}
                     </Link>
                 );

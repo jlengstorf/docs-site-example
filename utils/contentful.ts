@@ -72,6 +72,8 @@ export async function resolveFields(entry: any): Promise<any> {
         const { html, language } = await highlightCodeBlock(entry.fields.body, entry.fields.language);
         if (html && language) fields.code = { html, language };
     }
+    // Add urlPath to pages
+    if (_type === 'page') fields.urlPath = fields.slug.startsWith('/') ? fields.slug : `/${fields.slug}`;
 
     return { ...fields, _id, _type };
 }
