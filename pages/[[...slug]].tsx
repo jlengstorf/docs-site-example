@@ -6,6 +6,7 @@ import { Page, SiteConfig } from '@/types';
 import { DynamicComponent } from '@/components/DynamicComponent';
 import { Navigation } from '@/components/Navigation';
 import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 
 export const getStaticPaths: GetStaticPaths = async () => {
     const pages = await getPages();
@@ -50,6 +51,8 @@ const ComposablePage = ({ page, siteConfig }: { page: Page; siteConfig: SiteConf
                         {page.sections?.map((section, index) => (
                             <DynamicComponent key={index} {...section} />
                         ))}
+
+                        <Footer />
                     </div>
                 </div>
             </main>
