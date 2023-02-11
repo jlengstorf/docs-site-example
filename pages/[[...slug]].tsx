@@ -32,17 +32,21 @@ const ComposablePage = ({ page, siteConfig }: { page: Page; siteConfig: SiteConf
                 <title>{page.title}</title>
             </Head>
 
-            <Navigation items={siteConfig.mainNavigation} />
-
-            <main className="max-w-3xl py-12 mx-auto">
-                <div className="mb-6">
-                    <h1 className="mb-2">{page.title}</h1>
-                    <p className="text-2xl font-normal text-slate-700">{page.description}</p>
+            <main className="flex">
+                <div className="w-[20rem] h-screen">
+                    <Navigation items={siteConfig.mainNavigation} />
                 </div>
 
-                {page.sections?.map((section, index) => (
-                    <DynamicComponent key={index} {...section} />
-                ))}
+                <div className="max-w-3xl py-12 mx-auto">
+                    <div className="mb-6">
+                        <h1 className="mb-2">{page.title}</h1>
+                        <p className="text-2xl font-normal text-slate-700">{page.description}</p>
+                    </div>
+
+                    {page.sections?.map((section, index) => (
+                        <DynamicComponent key={index} {...section} />
+                    ))}
+                </div>
             </main>
         </>
     );
