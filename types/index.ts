@@ -32,3 +32,9 @@ export type Paragraph = Section<Contentful.TypeParagraphFields, 'paragraph'>;
 // ---------------------------------------- | Pages
 
 export type Page = Omit<Contentful.TypePageFields, 'sections'> & MetaFields & { _type: 'page'; urlPath: string; sections?: ComposableSection[] };
+
+export type PageHeading = {
+    title: string;
+    href: string;
+    level: Heading['level'];
+};

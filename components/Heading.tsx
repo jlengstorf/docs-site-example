@@ -13,5 +13,9 @@ const headingTagMap: {
 
 export const Heading: React.FC<HeadingProps> = (props) => {
     const TagName = headingTagMap[props.level].tagName;
-    return <TagName className={headingTagMap[props.level].className}>{props.body}</TagName>;
+    return (
+        <TagName className={headingTagMap[props.level].className} id={props._id}>
+            {props.body}
+        </TagName>
+    );
 };

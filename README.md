@@ -15,9 +15,10 @@ Adding a section:
 TODO:
 
 -   [ ] Table of contents from headings
--   [ ] Header + site config
-    -   [ ] Dark mode + Github icon
--   [ ] Simple footer
+
+-   [ ] Wire up Stackbit
+
+-   [ ] Dark mode + Github icon
 -   [ ] Landing page components
     -   [ ] Hero
     -   [ ] CardGrid -> Card
@@ -25,4 +26,3 @@ TODO:
     -   [ ] Update script to preserve those pages
 -   [ ] Real content
 -   [ ] Readme instructions
--   [ ] Wire up Stackbit
