@@ -1,4 +1,4 @@
-import { Theme } from '@/hooks/useSiteTheme';
+import { Theme } from '@/hooks/useThemeSwitcher';
 import { SiteConfig } from '@/types';
 import Link from 'next/link';
 import { Icon } from './Icon';

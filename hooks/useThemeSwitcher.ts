@@ -4,7 +4,7 @@ const VALID_THEMES = ['light', 'dark'];
 
 export type Theme = 'light' | 'dark';
 
-export function useSiteTheme(): [Theme, (theme: Theme) => void] {
+export function useThemeSwitcher(): [Theme, (theme: Theme) => void] {
     const [currentTheme, setCurrentTheme] = useState<Theme>('light');
 
     const toggleTheme = () => {

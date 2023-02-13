@@ -14,7 +14,7 @@ import { getPageBySlug, getPages, getSiteConfig, resolveFields } from '@/utils/c
 import { getTableOfContents } from '@/utils/page';
 
 import { useScrollOffset } from '@/hooks/useScrollOffset';
-import { useSiteTheme } from '@/hooks/useSiteTheme';
+import { useThemeSwitcher } from '@/hooks/useThemeSwitcher';
 
 export const getStaticPaths: GetStaticPaths = async () => {
     const pages = await getPages();
@@ -38,7 +38,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 const ComposablePage = ({ page, siteConfig, tableOfContents }: { page: Page; siteConfig: SiteConfig; tableOfContents: PageHeading[] }) => {
     const scrollableRef = useRef<HTMLDivElement>(null);
     const scrollOffset = useScrollOffset(scrollableRef);
-    const [theme, toggleTheme] = useSiteTheme();
+    const [theme, toggleTheme] = useThemeSwitcher();
 
     if (!page) return null;
 
