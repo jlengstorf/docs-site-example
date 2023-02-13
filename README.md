@@ -14,13 +14,18 @@ Adding a section:
 
 TODO:
 
--   [ ] Wire up Stackbit
+-   [ ] Wire up Stackbit (in a separate branch)
+-   [ ] Readme instructions
 
--   [ ] Dark mode + Github icon
+Nice to Have:
+
 -   [ ] Landing page components
     -   [ ] Hero
     -   [ ] CardGrid -> Card
 -   [ ] Add landing pages
     -   [ ] Update script to preserve those pages
 -   [ ] Real content
--   [ ] Readme instructions
+
+Bug fixes:
+
+-   [ ] Dark mode flicker
