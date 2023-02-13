@@ -2453,7 +2453,7 @@
         "id": "2IzbxPzQvQFel1tquYZbdx",
         "type": "Entry",
         "createdAt": "2023-02-09T21:05:44.126Z",
-        "updatedAt": "2023-02-13T20:28:59.820Z",
+        "updatedAt": "2023-02-13T21:04:18.940Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2461,8 +2461,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 19,
-        "publishedAt": "2023-02-13T20:28:59.820Z",
+        "publishedVersion": 22,
+        "publishedAt": "2023-02-13T21:04:01.620Z",
         "firstPublishedAt": "2023-02-09T21:24:37.347Z",
         "createdBy": {
           "sys": {
@@ -2478,8 +2478,8 @@
             "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
-        "publishedCounter": 6,
-        "version": 20,
+        "publishedCounter": 7,
+        "version": 26,
         "publishedBy": {
           "sys": {
             "type": "Link",

@@ -1,6 +1,20 @@
 TODO ...
 
-Adding a section:
+## The Basics
+
+-   Component theory (Notion-blocks)
+-   Styling
+
+Features:
+
+-   Dark/light mode
+-   Syntax highlighting
+
+## Setup
+
+-   Importing to Contentful ...
+
+## Adding a section:
 
 1. Add model to contentful
 1. Add to page's section
@@ -12,10 +26,4 @@ Adding a section:
     - Use new section type for props
 1. Add item to `DynamicComponent`
 
-TODO:
-
--   [ ] Readme instructions
-
-Bug fixes:
-
--   [ ] Dark mode flicker
+##
