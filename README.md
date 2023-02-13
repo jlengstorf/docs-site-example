@@ -9,6 +9,8 @@ Features:
 
 -   Dark/light mode
 -   Syntax highlighting
+-   Composable pages
+-   Stackbit ready
 
 ## Setup
 
