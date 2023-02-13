@@ -1,16 +1,20 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
+import { useRef } from 'react';
 import Head from 'next/head';
 
-import { getPageBySlug, getPages, getSiteConfig, resolveFields } from '@/utils/contentful';
 import { Page, PageHeading, SiteConfig } from '@/types';
+
 import { DynamicComponent } from '@/components/DynamicComponent';
-import { Navigation } from '@/components/Navigation';
-import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { Header } from '@/components/Header';
+import { Navigation } from '@/components/Navigation';
 import { TableOfContents } from '@/components/TableOfContents';
+
+import { getPageBySlug, getPages, getSiteConfig, resolveFields } from '@/utils/contentful';
 import { getTableOfContents } from '@/utils/page';
+
 import { useScrollOffset } from '@/hooks/useScrollOffset';
-import { useRef } from 'react';
+import { useSiteTheme } from '@/hooks/useSiteTheme';
 
 export const getStaticPaths: GetStaticPaths = async () => {
     const pages = await getPages();
@@ -34,6 +38,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 const ComposablePage = ({ page, siteConfig, tableOfContents }: { page: Page; siteConfig: SiteConfig; tableOfContents: PageHeading[] }) => {
     const scrollableRef = useRef<HTMLDivElement>(null);
     const scrollOffset = useScrollOffset(scrollableRef);
+    const [theme, toggleTheme] = useSiteTheme();
 
     if (!page) return null;
 
@@ -43,7 +48,7 @@ const ComposablePage = ({ page, siteConfig, tableOfContents }: { page: Page; sit
                 <title>{page.title}</title>
             </Head>
 
-            <Header {...siteConfig} />
+            <Header {...siteConfig} theme={theme} toggleTheme={toggleTheme} />
 
             <main className="flex overflow-y-hidden h-[calc(100vh-58px)]">
                 <div className="w-[20rem] h-full bg-slate-50">

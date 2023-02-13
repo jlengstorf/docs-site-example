@@ -14,8 +14,6 @@ Adding a section:
 
 TODO:
 
--   [ ] Table of contents from headings
-
 -   [ ] Wire up Stackbit
 
 -   [ ] Dark mode + Github icon
