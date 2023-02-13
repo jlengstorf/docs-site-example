@@ -18,17 +18,21 @@ export type NavLink = Omit<Contentful.TypeNavLinkFields, 'page' | 'children'> & 
 // ---------------------------------------- | Atoms
 
 export type Badge = Contentful.TypeBadgeFields & MetaFields & { _type: 'badge' };
+export type Button = Contentful.TypeButtonFields & MetaFields & { _type: 'button' };
+export type Card = Contentful.TypeCardFields & MetaFields & { _type: 'card' };
 
 // ---------------------------------------- | Sections
 
-export type SectionType = 'callout' | 'codeBlock' | 'heading' | 'image' | 'list' | 'paragraph';
-export type ComposableSection = Callout | CodeBlock | Heading | Image | List | Paragraph;
+export type SectionType = 'callout' | 'cardGrid' | 'codeBlock' | 'heading' | 'hero' | 'image' | 'list' | 'paragraph';
+export type ComposableSection = Callout | CardGrid | CodeBlock | Heading | Hero | Image | List | Paragraph;
 
 export type Section<Fields, TypeValue extends SectionType> = Fields & MetaFields & { _type: TypeValue };
 
 export type Callout = Section<Contentful.TypeCalloutFields, 'callout'>;
+export type CardGrid = Omit<Section<Contentful.TypeCardGridFields, 'cardGrid'>, 'cards'> & { cards: Card[] };
 export type CodeBlock = Section<Contentful.TypeCodeBlockFields, 'codeBlock'> & { code: { html: string; language: 'js' | 'ts' | 'txt' } };
 export type Heading = Omit<Section<Contentful.TypeHeadingFields, 'heading'>, 'badge'> & { badge?: Badge };
+export type Hero = Omit<Section<Contentful.TypeHeroFields, 'hero'>, 'badge' | 'button'> & { badge?: Badge; button: Button };
 export type Image = Omit<Section<Contentful.TypeImageFields, 'image'>, 'image'> & { image: ContentfulTypes.Asset['fields'] };
 export type List = Omit<Section<Contentful.TypeListFields, 'list'>, 'items'> & { items: Array<Paragraph> };
 export type Paragraph = Section<Contentful.TypeParagraphFields, 'paragraph'>;
