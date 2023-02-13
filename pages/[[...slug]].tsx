@@ -54,7 +54,7 @@ const ComposablePage = ({ page, siteConfig, tableOfContents }: { page: Page; sit
 
             <Header {...siteConfig} theme={theme} toggleTheme={toggleTheme} />
 
-            <main className="flex overflow-y-hidden h-[calc(100vh-58px)]">
+            <main className="flex overflow-y-hidden h-[calc(100vh-58px)]" data-sb-object-id={page._id}>
                 <div className="w-[20rem] h-full bg-slate-50 dark:bg-slate-700">
                     <Navigation items={siteConfig.mainNavigation} />
                 </div>
@@ -63,7 +63,9 @@ const ComposablePage = ({ page, siteConfig, tableOfContents }: { page: Page; sit
                     <div className={`max-w-4xl pt-12 mx-auto ${hasTableOfContents ? 'flex' : ''}`}>
                         <div className="px-6">
                             <div className="mb-12">
-                                <h1 className="mb-2">{page.title}</h1>
+                                <h1 className="mb-2" data-sb-field-path="title">
+                                    {page.title}
+                                </h1>
                                 <p className="text-2xl font-normal text-slate-700 dark:text-slate-400">{page.description}</p>
                             </div>
 
