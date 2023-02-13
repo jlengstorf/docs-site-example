@@ -62,7 +62,7 @@ const ComposablePage = ({ page, siteConfig, tableOfContents }: { page: Page; sit
                 <div className="w-full h-full overflow-y-scroll" ref={scrollableRef}>
                     <div className={`max-w-4xl pt-12 mx-auto ${hasTableOfContents ? 'flex' : ''}`}>
                         <div className="px-6">
-                            <div className="mb-6">
+                            <div className="mb-12">
                                 <h1 className="mb-2">{page.title}</h1>
                                 <p className="text-2xl font-normal text-slate-700 dark:text-slate-400">{page.description}</p>
                             </div>
