@@ -1,6 +1,22 @@
 TODO ...
 
-Adding a section:
+## The Basics
+
+-   Component theory (Notion-blocks)
+-   Styling
+
+Features:
+
+-   Dark/light mode
+-   Syntax highlighting
+-   Composable pages
+-   Stackbit ready
+
+## Setup
+
+-   Importing to Contentful ...
+
+## Adding a section:
 
 1. Add model to contentful
 1. Add to page's section
@@ -65,3 +81,5 @@ TODO:
 Bug fixes:
 
 -   [ ] Dark mode flicker
+
+##
