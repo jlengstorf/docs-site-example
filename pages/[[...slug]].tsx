@@ -42,6 +42,8 @@ const ComposablePage = ({ page, siteConfig, tableOfContents }: { page: Page; sit
 
     if (!page) return null;
 
+    const hasTableOfContents = tableOfContents.length > 0 && !page.hideTableOfContents;
+
     return (
         <>
             <Head>
@@ -56,7 +58,7 @@ const ComposablePage = ({ page, siteConfig, tableOfContents }: { page: Page; sit
                 </div>
 
                 <div className="w-full h-full overflow-y-scroll" ref={scrollableRef}>
-                    <div className="flex max-w-4xl pt-12 mx-auto">
+                    <div className={`max-w-4xl pt-12 mx-auto ${hasTableOfContents ? 'flex' : ''}`}>
                         <div className="px-6">
                             <div className="mb-6">
                                 <h1 className="mb-2">{page.title}</h1>
@@ -70,9 +72,11 @@ const ComposablePage = ({ page, siteConfig, tableOfContents }: { page: Page; sit
                             <Footer />
                         </div>
 
-                        <div className="flex-shrink-0 w-72 pl-10 max-h-[calc(100vh-8rem)] sticky top-12">
-                            <TableOfContents items={tableOfContents} scrollTop={scrollOffset} bodyRef={scrollableRef} scrollOffset={64} />
-                        </div>
+                        {hasTableOfContents && (
+                            <div className="flex-shrink-0 w-72 pl-10 max-h-[calc(100vh-8rem)] sticky top-12">
+                                <TableOfContents items={tableOfContents} scrollTop={scrollOffset} bodyRef={scrollableRef} scrollOffset={64} />
+                            </div>
+                        )}
                     </div>
                 </div>
             </main>
