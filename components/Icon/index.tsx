@@ -1,4 +1,5 @@
 import { PropsWithChildren } from 'react';
+import { ArrowRight } from './ArrowRight';
 import { GitHub } from './GitHub';
 import { Heart } from './Heart';
 import { Info } from './Info';
@@ -14,6 +15,7 @@ export const IconWrapper: React.FC<PropsWithChildren> = (props) => {
 };
 
 export const Icon = {
+    ArrowRight,
     GitHub,
     Heart,
     Info,

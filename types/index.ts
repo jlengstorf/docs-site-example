@@ -32,7 +32,11 @@ export type Callout = Section<Contentful.TypeCalloutFields, 'callout'>;
 export type CardGrid = Omit<Section<Contentful.TypeCardGridFields, 'cardGrid'>, 'cards'> & { cards: Card[] };
 export type CodeBlock = Section<Contentful.TypeCodeBlockFields, 'codeBlock'> & { code: { html: string; language: 'js' | 'ts' | 'txt' } };
 export type Heading = Omit<Section<Contentful.TypeHeadingFields, 'heading'>, 'badge'> & { badge?: Badge };
-export type Hero = Omit<Section<Contentful.TypeHeroFields, 'hero'>, 'badge' | 'button'> & { badge?: Badge; button: Button };
+export type Hero = Omit<Section<Contentful.TypeHeroFields, 'hero'>, 'badge' | 'button' | 'image'> & {
+    badge?: Badge;
+    button: Button;
+    image: ContentfulTypes.Asset['fields'];
+};
 export type Image = Omit<Section<Contentful.TypeImageFields, 'image'>, 'image'> & { image: ContentfulTypes.Asset['fields'] };
 export type List = Omit<Section<Contentful.TypeListFields, 'list'>, 'items'> & { items: Array<Paragraph> };
 export type Paragraph = Section<Contentful.TypeParagraphFields, 'paragraph'>;
