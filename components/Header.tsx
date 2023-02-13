@@ -17,7 +17,7 @@ export const Header: React.FC<Props> = (props) => {
                 <Link href="/" className="font-black">
                     {props.title}
                 </Link>
-                <div className="flex items-center space-x-3">
+                <div className="flex items-center space-x-4">
                     <button className="w-5" onClick={() => props.toggleTheme()}>
                         <IconTagName />
                     </button>
