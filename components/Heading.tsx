@@ -15,8 +15,10 @@ const headingTagMap: {
 export const Heading: React.FC<HeadingProps> = (props) => {
     const TagName = headingTagMap[props.level].tagName;
     return (
-        <TagName className={`flex items-center space-x-3 ${headingTagMap[props.level].className}`} id={props._id}>
-            <span className="inline-block">{props.body}</span>
+        <TagName className={`flex items-center space-x-3 ${headingTagMap[props.level].className}`} id={props._id} data-sb-object-id={props._id}>
+            <span className="inline-block" data-sb-field-path="body">
+                {props.body}
+            </span>
             {props.badge?._id && <Badge {...props.badge} />}
         </TagName>
     );
