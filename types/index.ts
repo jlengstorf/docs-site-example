@@ -15,6 +15,10 @@ export type SiteConfig = Omit<Contentful.TypeSiteConfigFields, 'mainNavigation'>
 
 export type NavLink = Omit<Contentful.TypeNavLinkFields, 'page' | 'children'> & MetaFields & { page: Page; children?: NavLink[] };
 
+// ---------------------------------------- | Atoms
+
+export type Badge = Contentful.TypeBadgeFields & MetaFields & { _type: 'badge' };
+
 // ---------------------------------------- | Sections
 
 export type SectionType = 'callout' | 'codeBlock' | 'heading' | 'image' | 'list' | 'paragraph';
@@ -24,7 +28,7 @@ export type Section<Fields, TypeValue extends SectionType> = Fields & MetaFields
 
 export type Callout = Section<Contentful.TypeCalloutFields, 'callout'>;
 export type CodeBlock = Section<Contentful.TypeCodeBlockFields, 'codeBlock'> & { code: { html: string; language: 'js' | 'ts' | 'txt' } };
-export type Heading = Section<Contentful.TypeHeadingFields, 'heading'>;
+export type Heading = Omit<Section<Contentful.TypeHeadingFields, 'heading'>, 'badge'> & { badge?: Badge };
 export type Image = Omit<Section<Contentful.TypeImageFields, 'image'>, 'image'> & { image: ContentfulTypes.Asset['fields'] };
 export type List = Omit<Section<Contentful.TypeListFields, 'list'>, 'items'> & { items: Array<Paragraph> };
 export type Paragraph = Section<Contentful.TypeParagraphFields, 'paragraph'>;
