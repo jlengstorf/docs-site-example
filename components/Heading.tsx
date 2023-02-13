@@ -1,4 +1,5 @@
 import { Heading as HeadingProps } from '@/types';
+import { Badge } from './Badge';
 
 const headingTagMap: {
     [K in HeadingProps['level']]: { tagName: React.ElementType; className: string };
@@ -14,8 +15,9 @@ const headingTagMap: {
 export const Heading: React.FC<HeadingProps> = (props) => {
     const TagName = headingTagMap[props.level].tagName;
     return (
-        <TagName className={headingTagMap[props.level].className} id={props._id}>
-            {props.body}
+        <TagName className={`flex items-center space-x-3 ${headingTagMap[props.level].className}`} id={props._id}>
+            <span className="inline-block">{props.body}</span>
+            {props.badge?._id && <Badge {...props.badge} />}
         </TagName>
     );
 };
