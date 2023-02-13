@@ -43,6 +43,7 @@ export async function getPageBySlug(slug: string): Promise<Contentful.TypePage |
 
 const markdownFieldMap: { [K in SectionType]?: string[] } = {
     callout: ['body'],
+    hero: ['body'],
     paragraph: ['body']
 };
 

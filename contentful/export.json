@@ -12,7 +12,7 @@
         "id": "page",
         "type": "ContentType",
         "createdAt": "2023-02-09T19:22:50.397Z",
-        "updatedAt": "2023-02-10T19:39:00.632Z",
+        "updatedAt": "2023-02-13T20:19:34.885Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -20,8 +20,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 13,
-        "publishedAt": "2023-02-10T19:39:00.632Z",
+        "publishedVersion": 31,
+        "publishedAt": "2023-02-13T20:19:34.885Z",
         "firstPublishedAt": "2023-02-09T19:22:50.704Z",
         "createdBy": {
           "sys": {
@@ -37,8 +37,8 @@
             "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
-        "publishedCounter": 7,
-        "version": 14,
+        "publishedCounter": 16,
+        "version": 32,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -85,6 +85,20 @@
           "omitted": false
         },
         {
+          "id": "hideTableOfContents",
+          "name": "Hide Table of Contents",
+          "type": "Boolean",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": false
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
           "id": "sections",
           "name": "Sections",
           "type": "Array",
@@ -104,7 +118,9 @@
                   "callout",
                   "codeBlock",
                   "image",
-                  "list"
+                  "list",
+                  "hero",
+                  "cardGrid"
                 ]
               }
             ],
@@ -915,6 +931,388 @@
           }
         }
       ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "abm9he3ijxmu"
+          }
+        },
+        "id": "hero",
+        "type": "ContentType",
+        "createdAt": "2023-02-13T20:13:51.086Z",
+        "updatedAt": "2023-02-13T20:16:21.769Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2023-02-13T20:16:21.769Z",
+        "firstPublishedAt": "2023-02-13T20:13:51.398Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Hero",
+      "description": "Large section used to highlight content",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "body",
+          "name": "Body",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "image",
+          "name": "Image",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "badge",
+          "name": "Badge",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "badge"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "button",
+          "name": "Button",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "linkContentType": [
+                "button"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "abm9he3ijxmu"
+          }
+        },
+        "id": "button",
+        "type": "ContentType",
+        "createdAt": "2023-02-13T20:15:11.531Z",
+        "updatedAt": "2023-02-13T20:27:09.584Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2023-02-13T20:27:09.584Z",
+        "firstPublishedAt": "2023-02-13T20:15:11.748Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Button",
+      "description": "Link to an internal or external page, with styling options",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "href",
+          "name": "Link",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "showArrow",
+          "name": "Show Arrow",
+          "type": "Boolean",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": false
+          },
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "abm9he3ijxmu"
+          }
+        },
+        "id": "card",
+        "type": "ContentType",
+        "createdAt": "2023-02-13T20:18:18.412Z",
+        "updatedAt": "2023-02-13T20:27:57.271Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2023-02-13T20:27:57.271Z",
+        "firstPublishedAt": "2023-02-13T20:18:18.738Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Card",
+      "description": "Summary content linking to another page",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "href",
+          "name": "URL",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "body",
+          "name": "Body",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "abm9he3ijxmu"
+          }
+        },
+        "id": "cardGrid",
+        "type": "ContentType",
+        "createdAt": "2023-02-13T20:19:04.791Z",
+        "updatedAt": "2023-02-13T20:19:05.076Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-02-13T20:19:05.076Z",
+        "firstPublishedAt": "2023-02-13T20:19:05.076Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Card Grid",
+      "description": "Layout of multiple cards",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "cards",
+          "name": "Cards",
+          "type": "Array",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "card"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ]
     }
   ],
   "tags": [
@@ -931,7 +1329,7 @@
             "linkType": "Space"
           }
         },
-        "version": 14,
+        "version": 32,
         "createdAt": "2023-02-09T19:22:50.813Z",
         "createdBy": {
           "sys": {
@@ -940,7 +1338,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2023-02-10T19:39:01.304Z",
+        "updatedAt": "2023-02-13T20:19:35.405Z",
         "updatedBy": {
           "sys": {
             "id": "7zhoOzOJYq0RqY5mshy4HK",
@@ -980,6 +1378,11 @@
         {
           "fieldId": "description",
           "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "hideTableOfContents",
+          "widgetId": "boolean",
           "widgetNamespace": "builtin"
         },
         {
@@ -1521,6 +1924,258 @@
           "widgetNamespace": "builtin"
         }
       ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "abm9he3ijxmu",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 4,
+        "createdAt": "2023-02-13T20:13:51.551Z",
+        "createdBy": {
+          "sys": {
+            "id": "7zhoOzOJYq0RqY5mshy4HK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-02-13T20:16:22.380Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7zhoOzOJYq0RqY5mshy4HK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "hero",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "body",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "image",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "badge",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "button",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "abm9he3ijxmu",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 4,
+        "createdAt": "2023-02-13T20:15:11.978Z",
+        "createdBy": {
+          "sys": {
+            "id": "7zhoOzOJYq0RqY5mshy4HK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-02-13T20:27:10.101Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7zhoOzOJYq0RqY5mshy4HK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "button",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "href",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "showArrow",
+          "widgetId": "boolean",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "abm9he3ijxmu",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 4,
+        "createdAt": "2023-02-13T20:18:18.889Z",
+        "createdBy": {
+          "sys": {
+            "id": "7zhoOzOJYq0RqY5mshy4HK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-02-13T20:27:58.001Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7zhoOzOJYq0RqY5mshy4HK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "card",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "href",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "body",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "abm9he3ijxmu",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2023-02-13T20:19:05.160Z",
+        "createdBy": {
+          "sys": {
+            "id": "7zhoOzOJYq0RqY5mshy4HK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-02-13T20:19:05.591Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7zhoOzOJYq0RqY5mshy4HK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "cardGrid",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "settings": {
+            "helpText": "Used for the CMS only"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "cards",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
     }
   ],
   "entries": [
@@ -1540,7 +2195,7 @@
         "id": "1hRHqEg9NF9VzmlpQCAUlg",
         "type": "Entry",
         "createdAt": "2023-02-09T19:24:46.954Z",
-        "updatedAt": "2023-02-10T20:11:34.506Z",
+        "updatedAt": "2023-02-13T19:47:25.900Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1548,8 +2203,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 59,
-        "publishedAt": "2023-02-10T20:11:34.506Z",
+        "publishedVersion": 61,
+        "publishedAt": "2023-02-13T19:47:25.900Z",
         "firstPublishedAt": "2023-02-09T19:25:47.358Z",
         "createdBy": {
           "sys": {
@@ -1565,8 +2220,8 @@
             "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
-        "publishedCounter": 5,
-        "version": 60,
+        "publishedCounter": 6,
+        "version": 62,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1798,7 +2453,7 @@
         "id": "2IzbxPzQvQFel1tquYZbdx",
         "type": "Entry",
         "createdAt": "2023-02-09T21:05:44.126Z",
-        "updatedAt": "2023-02-10T19:56:58.921Z",
+        "updatedAt": "2023-02-13T20:28:59.820Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1806,8 +2461,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 8,
-        "publishedAt": "2023-02-10T19:56:58.921Z",
+        "publishedVersion": 19,
+        "publishedAt": "2023-02-13T20:28:59.820Z",
         "firstPublishedAt": "2023-02-09T21:24:37.347Z",
         "createdBy": {
           "sys": {
@@ -1823,8 +2478,8 @@
             "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
-        "publishedCounter": 2,
-        "version": 9,
+        "publishedCounter": 6,
+        "version": 20,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1852,13 +2507,37 @@
         "description": {
           "en-US": "This is the description for the home page."
         },
+        "hideTableOfContents": {
+          "en-US": true
+        },
         "sections": {
           "en-US": [
             {
               "sys": {
                 "type": "Link",
                 "linkType": "Entry",
-                "id": "6JbTKvlZCWnzC9rgqbn5xw"
+                "id": "4HdkXkoc2j6sQOysmpEeyh"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4T7RpUrYrQvqQ7D0sOw97S"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6SuTpySuQW1voAwETbhusd"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4H7AEZ8F6IINRr5l8SxHiH"
               }
             }
           ]
@@ -3805,7 +4484,7 @@
         "id": "4BpGFD69VpRiuDiWKxCFdM",
         "type": "Entry",
         "createdAt": "2023-02-10T20:42:25.803Z",
-        "updatedAt": "2023-02-10T20:42:26.459Z",
+        "updatedAt": "2023-02-13T19:47:25.877Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -3813,8 +4492,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2023-02-10T20:42:26.459Z",
+        "publishedVersion": 3,
+        "publishedAt": "2023-02-13T19:47:25.877Z",
         "firstPublishedAt": "2023-02-10T20:42:26.459Z",
         "createdBy": {
           "sys": {
@@ -3830,8 +4509,8 @@
             "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 2,
+        "version": 4,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -4063,7 +4742,7 @@
         "id": "5fz1BaZ7pu6yUtfBlud7kX",
         "type": "Entry",
         "createdAt": "2023-02-10T20:42:26.914Z",
-        "updatedAt": "2023-02-10T20:42:27.247Z",
+        "updatedAt": "2023-02-13T19:47:25.856Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -4071,8 +4750,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2023-02-10T20:42:27.247Z",
+        "publishedVersion": 3,
+        "publishedAt": "2023-02-13T19:47:25.856Z",
         "firstPublishedAt": "2023-02-10T20:42:27.247Z",
         "createdBy": {
           "sys": {
@@ -4088,8 +4767,8 @@
             "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 2,
+        "version": 4,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -4321,7 +5000,7 @@
         "id": "pBlaKPpBe4OmdqgfRY3Kv",
         "type": "Entry",
         "createdAt": "2023-02-10T20:42:27.714Z",
-        "updatedAt": "2023-02-10T20:42:28.026Z",
+        "updatedAt": "2023-02-13T19:47:25.765Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -4329,8 +5008,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2023-02-10T20:42:28.026Z",
+        "publishedVersion": 3,
+        "publishedAt": "2023-02-13T19:47:25.765Z",
         "firstPublishedAt": "2023-02-10T20:42:28.026Z",
         "createdBy": {
           "sys": {
@@ -4346,8 +5025,8 @@
             "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 2,
+        "version": 4,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -4579,7 +5258,7 @@
         "id": "7yjKlxWePu5Jpi4f7aNsB0",
         "type": "Entry",
         "createdAt": "2023-02-10T20:42:28.551Z",
-        "updatedAt": "2023-02-10T20:42:29.175Z",
+        "updatedAt": "2023-02-13T19:46:28.798Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -4587,8 +5266,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2023-02-10T20:42:29.175Z",
+        "publishedVersion": 5,
+        "publishedAt": "2023-02-13T19:46:28.798Z",
         "firstPublishedAt": "2023-02-10T20:42:29.175Z",
         "createdBy": {
           "sys": {
@@ -4604,8 +5283,8 @@
             "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 2,
+        "version": 6,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -4837,7 +5516,7 @@
         "id": "5KKw0pEBPiuKi75ysXFrGY",
         "type": "Entry",
         "createdAt": "2023-02-10T20:42:29.600Z",
-        "updatedAt": "2023-02-10T20:42:29.879Z",
+        "updatedAt": "2023-02-13T19:47:25.834Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -4845,8 +5524,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2023-02-10T20:42:29.879Z",
+        "publishedVersion": 3,
+        "publishedAt": "2023-02-13T19:47:25.834Z",
         "firstPublishedAt": "2023-02-10T20:42:29.879Z",
         "createdBy": {
           "sys": {
@@ -4862,8 +5541,8 @@
             "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 2,
+        "version": 4,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -5095,7 +5774,7 @@
         "id": "4LSIoSUDg8c8bN6xstdpHh",
         "type": "Entry",
         "createdAt": "2023-02-10T20:42:30.293Z",
-        "updatedAt": "2023-02-10T20:42:30.609Z",
+        "updatedAt": "2023-02-13T19:47:25.789Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -5103,8 +5782,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2023-02-10T20:42:30.609Z",
+        "publishedVersion": 3,
+        "publishedAt": "2023-02-13T19:47:25.789Z",
         "firstPublishedAt": "2023-02-10T20:42:30.609Z",
         "createdBy": {
           "sys": {
@@ -5120,8 +5799,8 @@
             "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 2,
+        "version": 4,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -5353,7 +6032,7 @@
         "id": "2as89k6Wg0BFrmCuLVxQRj",
         "type": "Entry",
         "createdAt": "2023-02-10T20:42:31.077Z",
-        "updatedAt": "2023-02-10T20:42:31.376Z",
+        "updatedAt": "2023-02-13T19:47:25.710Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -5361,8 +6040,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2023-02-10T20:42:31.376Z",
+        "publishedVersion": 3,
+        "publishedAt": "2023-02-13T19:47:25.710Z",
         "firstPublishedAt": "2023-02-10T20:42:31.376Z",
         "createdBy": {
           "sys": {
@@ -5378,8 +6057,8 @@
             "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 2,
+        "version": 4,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -6226,6 +6905,682 @@
               "id": "2as89k6Wg0BFrmCuLVxQRj"
             }
           }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "abm9he3ijxmu"
+          }
+        },
+        "id": "4HdkXkoc2j6sQOysmpEeyh",
+        "type": "Entry",
+        "createdAt": "2023-02-13T20:24:48.371Z",
+        "updatedAt": "2023-02-13T20:25:23.563Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2023-02-13T20:25:23.563Z",
+        "firstPublishedAt": "2023-02-13T20:25:23.563Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "callout"
+          }
+        }
+      },
+      "fields": {
+        "body": {
+          "en-US": "This is an example of a page that is more like a landing page and less like direct documentation."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "abm9he3ijxmu"
+          }
+        },
+        "id": "6SuTpySuQW1voAwETbhusd",
+        "type": "Entry",
+        "createdAt": "2023-02-13T20:25:31.407Z",
+        "updatedAt": "2023-02-13T20:25:43.956Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2023-02-13T20:25:43.956Z",
+        "firstPublishedAt": "2023-02-13T20:25:43.956Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "heading"
+          }
+        }
+      },
+      "fields": {
+        "body": {
+          "en-US": "Docs Sections"
+        },
+        "level": {
+          "en-US": "2"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "abm9he3ijxmu"
+          }
+        },
+        "id": "4T7RpUrYrQvqQ7D0sOw97S",
+        "type": "Entry",
+        "createdAt": "2023-02-13T20:25:49.159Z",
+        "updatedAt": "2023-02-13T20:27:25.239Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2023-02-13T20:27:25.239Z",
+        "firstPublishedAt": "2023-02-13T20:27:25.239Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "hero"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Example Docs Site"
+        },
+        "body": {
+          "en-US": "Deserunt consectetur aliquip velit ullamco excepteur anim commodo excepteur minim enim ullamco. Laborum ut pariatur in consequat ut sunt veniam laboris pariatur aliquip ipsum sunt nostrud exercitation."
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "4aIq3uJKAv71CbwjcdmMd6"
+            }
+          }
+        },
+        "badge": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7uhgK3u2co7mVU2JPnEg7j"
+            }
+          }
+        },
+        "button": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "2OPg8nln6zj4LcgTnJT8db"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "abm9he3ijxmu"
+          }
+        },
+        "id": "7uhgK3u2co7mVU2JPnEg7j",
+        "type": "Entry",
+        "createdAt": "2023-02-13T20:26:23.916Z",
+        "updatedAt": "2023-02-13T20:26:31.383Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2023-02-13T20:26:31.383Z",
+        "firstPublishedAt": "2023-02-13T20:26:31.383Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "badge"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Introduction"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "abm9he3ijxmu"
+          }
+        },
+        "id": "2OPg8nln6zj4LcgTnJT8db",
+        "type": "Entry",
+        "createdAt": "2023-02-13T20:26:38.128Z",
+        "updatedAt": "2023-02-13T20:27:23.084Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2023-02-13T20:27:23.084Z",
+        "firstPublishedAt": "2023-02-13T20:27:23.084Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "button"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Get Started"
+        },
+        "href": {
+          "en-US": "/getting-started"
+        },
+        "showArrow": {
+          "en-US": true
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "abm9he3ijxmu"
+          }
+        },
+        "id": "4H7AEZ8F6IINRr5l8SxHiH",
+        "type": "Entry",
+        "createdAt": "2023-02-13T20:27:30.874Z",
+        "updatedAt": "2023-02-13T20:28:57.728Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2023-02-13T20:28:57.728Z",
+        "firstPublishedAt": "2023-02-13T20:28:57.728Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "cardGrid"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Home Section Grid"
+        },
+        "cards": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4J4tmefDAloTir19KxaSYM"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6dgnPb1XY3dejVY9tgUGIq"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3CUjrgyTG4AqtQ0TEhALRW"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "abm9he3ijxmu"
+          }
+        },
+        "id": "4J4tmefDAloTir19KxaSYM",
+        "type": "Entry",
+        "createdAt": "2023-02-13T20:27:40.695Z",
+        "updatedAt": "2023-02-13T20:28:19.081Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2023-02-13T20:28:19.081Z",
+        "firstPublishedAt": "2023-02-13T20:28:19.081Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "card"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Getting Started"
+        },
+        "href": {
+          "en-US": "/getting-started"
+        },
+        "body": {
+          "en-US": "Irure sunt id amet tempor officia adipisicing non. Nisi duis id consectetur magna aliquip velit voluptate nostrud."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "abm9he3ijxmu"
+          }
+        },
+        "id": "6dgnPb1XY3dejVY9tgUGIq",
+        "type": "Entry",
+        "createdAt": "2023-02-13T20:28:23.994Z",
+        "updatedAt": "2023-02-13T20:47:59.553Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2023-02-13T20:47:59.553Z",
+        "firstPublishedAt": "2023-02-13T20:28:37.217Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "card"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Concepts"
+        },
+        "href": {
+          "en-US": "/concepts"
+        },
+        "body": {
+          "en-US": "Incididunt labore excepteur elit Lorem aute anim sunt fugiat do dolor esse incididunt labore cupidatat."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "abm9he3ijxmu"
+          }
+        },
+        "id": "3CUjrgyTG4AqtQ0TEhALRW",
+        "type": "Entry",
+        "createdAt": "2023-02-13T20:28:39.659Z",
+        "updatedAt": "2023-02-13T20:48:04.952Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2023-02-13T20:48:04.952Z",
+        "firstPublishedAt": "2023-02-13T20:28:55.860Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "card"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Developer Guides"
+        },
+        "href": {
+          "en-US": "/guides"
+        },
+        "body": {
+          "en-US": "Qui culpa nisi exercitation et aute minim pariatur quis eiusmod nisi aliqua cupidatat ullamco aliqua."
         }
       }
     }

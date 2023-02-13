@@ -60,17 +60,7 @@ The rest should just work. 🎉
 
 TODO:
 
--   [ ] Wire up Stackbit (in a separate branch)
 -   [ ] Readme instructions
-
-Nice to Have:
-
--   [ ] Landing page components
-    -   [ ] Hero
-    -   [ ] CardGrid -> Card
--   [ ] Add landing pages
-    -   [ ] Update script to preserve those pages
--   [ ] Real content
 
 Bug fixes:
 

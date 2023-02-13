@@ -4,8 +4,10 @@ import { ComponentType } from 'react';
 
 const componentsMap: { [P in ComposableSection as P['_type']]: ComponentType<P> } = {
     callout: dynamic(() => import('./Callout').then((mod) => mod.Callout)),
+    cardGrid: dynamic(() => import('./CardGrid').then((mod) => mod.CardGrid)),
     codeBlock: dynamic(() => import('./CodeBlock').then((mod) => mod.CodeBlock)),
     heading: dynamic(() => import('./Heading').then((mod) => mod.Heading)),
+    hero: dynamic(() => import('./Hero').then((mod) => mod.Hero)),
     image: dynamic(() => import('./Image').then((mod) => mod.Image)),
     list: dynamic(() => import('./List').then((mod) => mod.List)),
     paragraph: dynamic(() => import('./Paragraph').then((mod) => mod.Paragraph))
