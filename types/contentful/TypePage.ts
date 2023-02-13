@@ -10,6 +10,7 @@ export interface TypePageFields {
     title: Contentful.EntryFields.Symbol;
     slug: Contentful.EntryFields.Symbol;
     description: Contentful.EntryFields.Text;
+    layout: "doc" | "landing";
     sections?: Contentful.Entry<TypeCalloutFields | TypeCodeBlockFields | TypeHeadingFields | TypeImageFields | TypeListFields | TypeParagraphFields>[];
 }
 

@@ -14,7 +14,6 @@ Adding a section:
 
 TODO:
 
--   [ ] Wire up Stackbit (in a separate branch)
 -   [ ] Readme instructions
 
 Nice to Have:

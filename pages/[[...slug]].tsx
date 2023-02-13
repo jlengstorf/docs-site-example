@@ -15,6 +15,8 @@ import { getTableOfContents } from '@/utils/page';
 
 import { useScrollOffset } from '@/hooks/useScrollOffset';
 import { useThemeSwitcher } from '@/hooks/useThemeSwitcher';
+import { DocLayout } from '@/layouts/Doc';
+import { LandingLayout } from '@/layouts/Landing';
 
 export const getStaticPaths: GetStaticPaths = async () => {
     const pages = await getPages();
@@ -35,12 +37,28 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     return { props: { page, siteConfig, tableOfContents } };
 };
 
+const layoutMap: {
+    [K in Page['layout']]: React.ElementType;
+} = {
+    doc: DocLayout,
+    landing: LandingLayout
+};
+
+export type LayoutProps = {
+    page: Page;
+    tableOfContents: PageHeading[];
+    scrollOffset: number;
+    scrollableRef: React.RefObject<HTMLDivElement>;
+};
+
 const ComposablePage = ({ page, siteConfig, tableOfContents }: { page: Page; siteConfig: SiteConfig; tableOfContents: PageHeading[] }) => {
     const scrollableRef = useRef<HTMLDivElement>(null);
     const scrollOffset = useScrollOffset(scrollableRef);
     const [theme, toggleTheme] = useThemeSwitcher();
 
     if (!page) return null;
+
+    const LayoutTagName = layoutMap[page.layout];
 
     return (
         <>
@@ -56,24 +74,7 @@ const ComposablePage = ({ page, siteConfig, tableOfContents }: { page: Page; sit
                 </div>
 
                 <div className="w-full h-full overflow-y-scroll" ref={scrollableRef}>
-                    <div className="flex max-w-4xl pt-12 mx-auto">
-                        <div className="px-6">
-                            <div className="mb-6">
-                                <h1 className="mb-2">{page.title}</h1>
-                                <p className="text-2xl font-normal text-slate-700 dark:text-slate-400">{page.description}</p>
-                            </div>
-
-                            {page.sections?.map((section, index) => (
-                                <DynamicComponent key={index} {...section} />
-                            ))}
-
-                            <Footer />
-                        </div>
-
-                        <div className="flex-shrink-0 w-72 pl-10 max-h-[calc(100vh-8rem)] sticky top-12">
-                            <TableOfContents items={tableOfContents} scrollTop={scrollOffset} bodyRef={scrollableRef} scrollOffset={64} />
-                        </div>
-                    </div>
+                    <LayoutTagName page={page} tableOfContents={tableOfContents} scrollOffset={scrollOffset} scrollableRef={scrollableRef} />
                 </div>
             </main>
         </>
