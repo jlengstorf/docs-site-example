@@ -8,7 +8,7 @@ const NavLink: React.FC<NavLinkProps & { topLevel?: boolean }> = (props) => {
 
     return (
         <li className={props.topLevel ? 'mb-6 last:mb-0 tracking-widest font-semibold uppercase' : 'tracking-normal normal-case font-normal mb-1 last:mb-0'}>
-            <Link href={props.page.urlPath} className={`text-sm ${isActive ? 'text-indigo-500' : ''}`}>
+            <Link href={props.page.urlPath} className={`text-sm ${isActive ? 'text-indigo-500 dark:text-indigo-300' : ''}`}>
                 {props.label || props.page.title}
             </Link>
             {props.children && (
@@ -24,7 +24,7 @@ const NavLink: React.FC<NavLinkProps & { topLevel?: boolean }> = (props) => {
 
 export const Navigation: React.FC<{ items: SiteConfig['mainNavigation'] }> = (props) => {
     return (
-        <div className="h-full px-6 py-8 border-r border-slate-200">
+        <div className="h-full px-6 py-8 border-r border-slate-200 dark:border-slate-600">
             <ul>
                 {props.items.map((item, index) => (
                     <NavLink key={index} {...item} topLevel={true} />

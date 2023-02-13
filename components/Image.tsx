@@ -6,16 +6,16 @@ export const Image: React.FC<ImageProps> = (props) => {
     if (src.startsWith('//')) src = `https:${src}`;
 
     return (
-        <div className="section my-8">
+        <div className="my-8 section">
             <NextImage
                 src={src}
                 alt={props.title}
                 width={props.image.file.details.image?.width}
                 height={props.image.file.details.image?.height}
-                className="rounded-md overflow-hidden"
+                className="overflow-hidden rounded-md"
             />
             {props.showCaption && props.image.description && (
-                <span className="block max-w-md mx-auto text-center mt-2 text-xs text-slate-500">{props.image.description}</span>
+                <span className="block max-w-md mx-auto mt-2 text-xs text-center text-slate-500 dark:text-slate-300">{props.image.description}</span>
             )}
         </div>
     );

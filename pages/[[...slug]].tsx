@@ -51,7 +51,7 @@ const ComposablePage = ({ page, siteConfig, tableOfContents }: { page: Page; sit
             <Header {...siteConfig} theme={theme} toggleTheme={toggleTheme} />
 
             <main className="flex overflow-y-hidden h-[calc(100vh-58px)]">
-                <div className="w-[20rem] h-full bg-slate-50">
+                <div className="w-[20rem] h-full bg-slate-50 dark:bg-slate-700">
                     <Navigation items={siteConfig.mainNavigation} />
                 </div>
 
@@ -60,7 +60,7 @@ const ComposablePage = ({ page, siteConfig, tableOfContents }: { page: Page; sit
                         <div className="px-6">
                             <div className="mb-6">
                                 <h1 className="mb-2">{page.title}</h1>
-                                <p className="text-2xl font-normal text-slate-700">{page.description}</p>
+                                <p className="text-2xl font-normal text-slate-700 dark:text-slate-400">{page.description}</p>
                             </div>
 
                             {page.sections?.map((section, index) => (

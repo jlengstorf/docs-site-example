@@ -67,7 +67,12 @@ export const TableOfContents: React.FC<Props> = (props) => {
             <ul>
                 {props.items.map((item, index) => {
                     return (
-                        <li key={index} className={`mb-1 text-sm ${activeItemIndex === index ? 'text-indigo-500' : ''} ${headingLevelClassMap[item.level]}`}>
+                        <li
+                            key={index}
+                            className={`mb-1 text-sm ${activeItemIndex === index ? 'text-indigo-500 dark:text-indigo-300' : ''} ${
+                                headingLevelClassMap[item.level]
+                            }`}
+                        >
                             <Link href={item.href}>{item.title}</Link>
                         </li>
                     );

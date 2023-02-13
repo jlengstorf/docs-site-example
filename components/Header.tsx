@@ -12,7 +12,7 @@ export const Header: React.FC<Props> = (props) => {
     const IconTagName = props.theme === 'dark' ? Icon.Sun : Icon.Moon;
 
     return (
-        <div className="border-b border-slate-200">
+        <div className="border-b border-slate-200 dark:border-slate-600">
             <div className="flex items-center justify-between px-6 py-4">
                 <Link href="/" className="font-black">
                     {props.title}
