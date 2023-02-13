@@ -9,6 +9,8 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { TableOfContents } from '@/components/TableOfContents';
 import { getTableOfContents } from '@/utils/page';
+import { useScrollOffset } from '@/hooks/useScrollOffset';
+import { useRef } from 'react';
 
 export const getStaticPaths: GetStaticPaths = async () => {
     const pages = await getPages();
@@ -30,6 +32,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 const ComposablePage = ({ page, siteConfig, tableOfContents }: { page: Page; siteConfig: SiteConfig; tableOfContents: PageHeading[] }) => {
+    const scrollableRef = useRef<HTMLDivElement>(null);
+    const scrollOffset = useScrollOffset(scrollableRef);
+
     if (!page) return null;
 
     return (
@@ -45,7 +50,7 @@ const ComposablePage = ({ page, siteConfig, tableOfContents }: { page: Page; sit
                     <Navigation items={siteConfig.mainNavigation} />
                 </div>
 
-                <div className="w-full h-full overflow-y-scroll">
+                <div className="w-full h-full overflow-y-scroll" ref={scrollableRef}>
                     <div className="flex max-w-4xl pt-12 mx-auto">
                         <div className="px-6">
                             <div className="mb-6">
@@ -61,7 +66,7 @@ const ComposablePage = ({ page, siteConfig, tableOfContents }: { page: Page; sit
                         </div>
 
                         <div className="flex-shrink-0 w-72 pl-10 max-h-[calc(100vh-8rem)] sticky top-12">
-                            <TableOfContents items={tableOfContents} />
+                            <TableOfContents items={tableOfContents} scrollTop={scrollOffset} bodyRef={scrollableRef} scrollOffset={64} />
                         </div>
                     </div>
                 </div>
