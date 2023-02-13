@@ -8,6 +8,7 @@
         "start": "next start",
         "lint": "next lint",
         "contentful:export": "contentful space export --config contentful/export-config.json --management-token $CONTENTFUL_ACCESS_TOKEN --space-id $CONTENTFUL_SPACE_ID",
+        "contentful:import": "node ./contentful/import.js",
         "contentful:types": "cf-content-types-generator contentful/export.json --out types/contentful"
     },
     "dependencies": {
