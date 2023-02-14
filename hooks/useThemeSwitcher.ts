@@ -29,7 +29,8 @@ export function useThemeSwitcher(): [Theme, (theme: Theme) => void] {
     );
 
     useEffect(() => {
-        setTheme(window.localStorage.getItem('theme') as Theme);
+        const theme = window.localStorage.getItem('theme') as Theme;
+        if (theme) setTheme(theme);
     }, [setTheme]);
 
     return [currentTheme, toggleTheme];
