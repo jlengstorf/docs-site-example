@@ -47,9 +47,7 @@ const ComposablePage = ({ page, siteConfig, tableOfContents }: { page: Page; sit
     return (
         <>
             <Head>
-                <title>
-                    {page.title} | {siteConfig.title}
-                </title>
+                <title>{`${page.title} | ${siteConfig.title}`}</title>
             </Head>
 
             <Header {...siteConfig} theme={theme} toggleTheme={toggleTheme} />
